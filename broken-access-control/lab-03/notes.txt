@@ -1,0 +1,7 @@
+Lab #3 - Unprotected admin function
+
+Target Goal - Access admin panel and use it to delete the user carlos.
+
+creds: wiener:peter
+
+Analysis:
