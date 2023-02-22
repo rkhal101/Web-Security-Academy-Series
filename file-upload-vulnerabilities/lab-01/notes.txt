@@ -1,0 +1,7 @@
+Lab #1 - Remote code execution via web shell upload
+
+Target Goal - Exploit the file upload vulnerability to exfiltrate the contents of the file /home/carlos/secret
+
+Creds - wiener:peter
+
+Analysis:
