@@ -1,0 +1,7 @@
+Lab #2 - Web shell upload via Content-Type restriction bypass
+
+Target Goal - Exploit the file upload vulnerability to exfiltrate the contents of the file /home/carlos/secret
+
+Creds - wiener:peter
+
+Analysis:
