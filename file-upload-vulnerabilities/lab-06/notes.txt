@@ -1,0 +1,7 @@
+Lab #6 - Remote code execution via polyglot web shell upload
+
+Target Goal - Exploit file upload vulnerability to exfiltrate the contents of the /home/carlos/secret
+
+Creds - wiener:peter
+
+Analysis:
