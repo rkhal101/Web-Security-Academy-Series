@@ -1,0 +1,8 @@
+Lab #4 - Web shell upload via extension blacklist bypass
+
+Target Goal - Bypass blacklist defense and upload a PHP web shell to exfitrate the contents of the file /home/carlos/secret
+
+Creds - wiener:peter
+
+Analysis:
+
