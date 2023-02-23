@@ -1,0 +1,8 @@
+Lab #3 - Web shell upload via path traversal
+
+Target Goal - Exploit file upload vulnerability to upload a PHP web shell and exfiltrate the contents of the /home/carlos/secret
+
+Creds - wiener:peter
+
+
+Analysis:
