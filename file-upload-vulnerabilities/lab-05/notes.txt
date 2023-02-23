@@ -1,0 +1,10 @@
+Lab #5 - Web shell upload via obfuscated file extension
+
+Target Goal - Exploit a file upload vulnerability to upload a web shell and exfiltrate the contents of the file /home/carlos/secret
+
+Creds - wiener:peter
+
+Analysis:
+
+
+
