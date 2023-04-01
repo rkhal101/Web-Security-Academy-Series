@@ -1,5 +1,0 @@
-Lab #1 - Stored XSS into HTML context with nothing encoded
-
-Target Goal - exploit stored xss vulnerability in comment functionality.
-
-Analysis:
