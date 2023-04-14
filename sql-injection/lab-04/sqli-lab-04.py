@@ -54,7 +54,6 @@ def main():
         print("[-] The SQLi attack was not successful.")
 
 
-
 if __name__ == "__main__":
     main()
 
