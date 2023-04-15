@@ -1,5 +1,9 @@
 Lab #3 - Blind OS command injection with output redirection
 
+YouTube video link below
+
+[Command Injection - Lab #3 Blind OS command injection with output redirection | Long Version](https://youtu.be/Gf2_UWsYrpM?list=PLuyTk2_mYISK9ywsFZZOT1LuO3Eb7Wq5q)
+
 Target Goal - Exploit the blind command injection and redirect the output from the whoami command to the /var/www/images
 
 
