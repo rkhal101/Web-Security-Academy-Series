@@ -7,6 +7,7 @@
 
 [https://portswigger.net/web-security/request-smuggling/advanced](https://portswigger.net/web-security/request-smuggling/advanced)
 
+*Note: As of the initial upload this file, it is not 100% polished, more editing to be done. But, examples from almost every lab are here..*
 ---
 *This is a collection of notes and walktthroughs I have made over the past couple of years on this attack.*
 
