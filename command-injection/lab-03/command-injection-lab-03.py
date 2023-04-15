@@ -4,6 +4,7 @@ import requests
 import sys
 import urllib3
 
+# Script is currently unsucessfull see comments on lines 24 - 26
 # use BeautifulSoup to extract the CSRF from the previou srequest and use it in the current one.
 from bs4 import BeautifulSoup
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -19,15 +20,10 @@ def get_csrf_token(s,url):
     soup = BeautifulSoup(r.text, 'html.parser')
     # the csrf value is found in the response of the GET /feedbak request.
     csrf = soup.find("input")['value']
-    # Error: 
-    # line 38, in exploit_command_injection
-    # csrf_token = get_csrf_token(s, url)
-    # ^^^^^^^^^^^^^^^^^^^^^^
-    # csrf = soup.find("input")['value']
-    # ~~~~~~~~~~~~~~~~~~^^^^^^^^^
-    # TypeError: 'NoneType' object is not subscriptable
     return csrf
-
+    # Error: 
+    # csrf = soup.find("input")['value']
+    # TypeError: 'NoneType' object is not subscriptable
 
 # Write this one second
 def exploit_command_injection(s, url):
