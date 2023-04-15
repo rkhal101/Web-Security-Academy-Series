@@ -6,6 +6,8 @@ Shell meta characters: `&`  `&&`  `|`  `||`  `;`  `$()` and the backtick
 
 [Command Injection | Complete Guide Video](https://youtu.be/UBWMLFbjPBc)
 
+[Command Injection - Lab #1 OS command injection, simple case | Long Version](https://youtu.be/nrvLJn7B5iI)
+
 Target Goal - Exploit command injection to execute whoami command.
 
 Analysis:
