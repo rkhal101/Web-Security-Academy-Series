@@ -1,11 +1,11 @@
 ## HTTP Request Smuggling / Desync Attacks: HTTP/1 &  HTTP/2
 [My YouTube Channel with a Request Smuggling playlist and more](https://www.youtube.com/@infosec5101)
 
-[https://github.com/carlospolop/hacktricks/blob/master/pentesting-web/http-request-smuggling/README.md](https://github.com/carlospolop/hacktricks/blob/master/pentesting-web/http-request-smuggling/README.md)
+[HackTricks on Request Smuggling](https://github.com/carlospolop/hacktricks/blob/master/pentesting-web/http-request-smuggling/README.md)
 
-[https://github.com/PortSwigger/http-request-smuggler](https://github.com/PortSwigger/http-request-smuggler)
+[HTTP Request Smuggling extension for BurpSuite](https://github.com/PortSwigger/http-request-smuggler)
 
-[https://portswigger.net/web-security/request-smuggling/advanced](https://portswigger.net/web-security/request-smuggling/advanced)
+[PortSwigger's labs for Advanced Request Smuggling](https://portswigger.net/web-security/request-smuggling/advanced)
 
 *Note: As of the initial upload this file, it is not 100% polished, more editing to be done. But, examples from almost every lab are here..*
 ---
