@@ -22,7 +22,6 @@ def enumerate_columns(url):
         res = r.text
         if "Internal Server Error" in res:
             return i - 1
-        i = i + 1
     return False
 
 

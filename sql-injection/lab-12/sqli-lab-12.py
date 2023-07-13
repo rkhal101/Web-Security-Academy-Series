@@ -5,7 +5,7 @@ import urllib.parse
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-proxies = {'http': 'http://127.0.0.1:8080', 'http': 'https://127.0.0.1:8080'}
+proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
 
 def sqli_password(url):
