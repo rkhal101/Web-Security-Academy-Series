@@ -1,9 +1,13 @@
 # Web Security Academy Series
 This is a forked repo from [rkhal101's original Web Security Academy Series.](https://github.com/rkhal101/Web-Security-Academy-Series)
+
 I have edited and refactored some of the Python scripts, as well as expanding many of the notes and adding extra resources and links.
-Think of this being to PortSwigger WebAcademy what [swisskeyrepo](https://github.com/swisskyrepo/PayloadsAllTheThings) is to WaPen payloads - A one stop shop for everything you need.
+Think of this being to PortSwigger WebAcademy what [swisskeyrepo](https://github.com/swisskyrepo/PayloadsAllTheThings) is to WaPen payloads - A one stop shop for everything you need, built on the [FOSS Philosophy.](https://en.wikibooks.org/wiki/FOSS_A_General_Introduction/Introduction)
+
 To view the commit history and changes, click [here.](https://github.com/rkhal101/Web-Security-Academy-Series/compare/main...LinuxUser255:Web-Security-Academy-Series:main)
-Lastly, feel free to suggest any imporvements, submit a pull request, etc. Colaboration and suggestions for improvemnt is always welcomed. And share with others.
+
+Lastly, feel free to suggest any imporvements, submit a pull request, etc, and share with anyone who might find this useful. 
+Colaboration and suggestions for improvemnt is always welcomed.
  
 - [Click here to vist PortSwigger's Learning Path](https://portswigger.net/web-security/learning-path) 
 - [Click here to see Rana Khalil's Web Security video series](https://www.youtube.com/@RanaKhalil101) I highly reccomend them.
