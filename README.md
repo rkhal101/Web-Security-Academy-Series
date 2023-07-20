@@ -2,6 +2,7 @@
 - [Click here to vist PortSwigger's Learning Path](https://portswigger.net/web-security/learning-path)
 - [Click here to see Rana Khalil's Web Security video series](https://www.youtube.com/@RanaKhalil101)
 - [Click here to view my Web Secruity Academy walkthroughs on YouTube](https://www.youtube.com/@infosec5101/featured)
+- [My HTTP Request Smuggling walkthroughs and tutorials H/1 & H/2](https://youtube.com/playlist?list=PLdj6yMJxBJ6J_p9fqiE3prN7BQGP0WZN7)
 ## More useful resources. I recommend bookmarking them if you haven't already.
 - [Swisskyrepo Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [Hack Tricks - Web App hacking resources](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
