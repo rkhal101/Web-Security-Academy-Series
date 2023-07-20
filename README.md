@@ -7,7 +7,7 @@ Think of this being to PortSwigger WebAcademy what [swisskeyrepo](https://github
 To view the commit history and changes, click [here.](https://github.com/rkhal101/Web-Security-Academy-Series/compare/main...LinuxUser255:Web-Security-Academy-Series:main)
 
 Lastly, feel free to suggest any imporvements, submit a pull request, etc, and share with anyone who might find this useful. 
-Colaboration and suggestions for improvemnt is always welcomed.
+Colaboration and suggestions for improvement is always welcomed.
  
 - [Click here to vist PortSwigger's Learning Path](https://portswigger.net/web-security/learning-path) 
 - [Click here to see Rana Khalil's Web Security video series](https://www.youtube.com/@RanaKhalil101) I highly reccomend them.
