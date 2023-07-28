@@ -9,7 +9,9 @@ To view the commit history and changes, click [here.](https://github.com/rkhal10
 Lastly, feel free to suggest any imporvements, submit a pull request, etc, and share with anyone who might find this useful. 
 Colaboration and suggestions for improvement is always welcomed.
  
-- [Click here to vist PortSwigger's Learning Path](https://portswigger.net/web-security/learning-path) 
+- [Click here to vist PortSwigger's Learning Path](https://portswigger.net/web-security/learning-path)
+- [Certification prepare Step 1: practitioner-level labs](https://portswigger.net/web-security/certification/how-to-prepare/practitioner-labs-prep-step-one)
+- [Certification prepare Step 2: core web security testing skills](https://portswigger.net/web-security/certification/how-to-prepare)
 - [Click here to see Rana Khalil's Web Security video series](https://www.youtube.com/@RanaKhalil101) I highly reccomend them.
 - [Click here to view my Web Secruity Academy walkthroughs on YouTube](https://www.youtube.com/@infosec5101/featured)
 - [My HTTP Request Smuggling walkthroughs and tutorials H/1 & H/2](https://youtube.com/playlist?list=PLdj6yMJxBJ6J_p9fqiE3prN7BQGP0WZN7)
@@ -18,5 +20,5 @@ Colaboration and suggestions for improvement is always welcomed.
 - [Hack Tricks - Web App hacking methodology](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
 
 ## Web Academy Learning Path
-### [Click here to jump to Port Swigger's Web Academy and book mark it in your BurpSuite browser](https://portswigger.net/web-security/learning-path)
+#### [Click here to jump to Port Swigger's Web Academy and book mark it in your BurpSuite browser](https://portswigger.net/web-security/learning-path)
 ![PortSwiggerWebAcademy_LearningPath](https://user-images.githubusercontent.com/46334926/232168453-c3af4859-79cd-4f26-8257-4e41a892d1e6.png)
