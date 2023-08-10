@@ -33,6 +33,7 @@ if __name__ == "__main__":
     except IndexError:
         print('[-] Usage: %s <url> <sql-payload>' % sys.argv[0])
         print('[-] Example: %s www.example.com "1=1"' % sys.argv[0])
+        sys.exit(-1)
 
     s = requests.Session()
 
