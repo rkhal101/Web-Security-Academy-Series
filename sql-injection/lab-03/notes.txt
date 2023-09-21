@@ -35,7 +35,7 @@ Rule when using the UNION operator:
 - The number and the order of the columns must be the same in all queries
 - The data types must be compatible
 
-Remeber ' --
+Remember ' --
 the single, or double quote is to "break" the string, or code, which enables you to inject your own query into it
 and use the double hyphens to ignore/comment out the rest of the code. Thus, only the injected query you created will be executed.
 
