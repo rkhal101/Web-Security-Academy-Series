@@ -34,5 +34,5 @@ Colaboration and suggestions for improvement is always welcomed.
 - **Think of it as a point of reference as you go through the labs.**
 - **Open and explore any of the directories for notes, scripts and resources for any of the challenges.**
 
-# Web Academy Learning Path
+# [Web Academy Learning Path](https://portswigger.net/web-security/all-topics)
  ![**Portswigger_all-topics**](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/0aafd08e-ca25-4513-9e8b-ae73b2f480ca)
