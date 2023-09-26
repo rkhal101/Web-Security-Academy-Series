@@ -1,12 +1,12 @@
 # Web Security Academy Series
 This is a forked repo from [**rkhal101's original Web Security Academy Series.**](https://github.com/rkhal101/Web-Security-Academy-Series)
 
-I have edited and refactored some of the Python scripts, as well as expanding many of the notes and adding extra resources and links.
-Think of this being to [**PortSwigger WebAcademy**](https://portswigger.net/web-security) what [**swisskeyrepo**](https://github.com/swisskyrepo/PayloadsAllTheThings) is to Web App Pentesting payloads - A one stop shop for everything you need, built on the [**FOSS Philosophy.**](https://en.wikibooks.org/wiki/FOSS_A_General_Introduction/Introduction)
+In this version, many of the Python scripts have been refactored as well as expanding many of the notes and adding extra resources.
+Think of it being to [**PortSwigger WebAcademy**](https://portswigger.net/web-security) what [**SwissKeyRepo**](https://github.com/swisskyrepo/PayloadsAllTheThings) is to Web App Pentesting payloads - A one stop shop for everything you need, built on the [**FOSS Philosophy.**](https://en.wikibooks.org/wiki/FOSS_A_General_Introduction/Introduction)
 
 To view the commit history and changes, click --> [**Here.**](https://github.com/rkhal101/Web-Security-Academy-Series/compare/main...LinuxUser255:Web-Security-Academy-Series:main)
 
-Lastly, feel free to suggest any imporvements, submit a pull request, etc, and share with anyone who might find this useful. 
+Feel free to suggest any imporvements, submit a pull request, etc, and share with anyone who might find this useful. 
 Colaboration and suggestions for improvement is always welcomed.
  
 - [**Click here to vist PortSwigger's Learning Path**](https://portswigger.net/web-security/learning-path)
@@ -16,7 +16,7 @@ Colaboration and suggestions for improvement is always welcomed.
 ## Web Academy video walkthroughs & explanations.
 - [**Rana Khalil's Web Security video series**](https://www.youtube.com/@RanaKhalil101) 
 - [**InfoSec GSO**](https://www.youtube.com/@infosec5101/featured)
-- [**My HTTP Request Smuggling walkthroughs and tutorials H/1 & H/2**](https://youtube.com/playlist?list=PLdj6yMJxBJ6J_p9fqiE3prN7BQGP0WZN7)
+- [**HTTP Request Smuggling walkthroughs and tutorials H/1 & H/2**](https://youtube.com/playlist?list=PLdj6yMJxBJ6J_p9fqiE3prN7BQGP0WZN7)
 - [**TJC Hacking**](https://www.youtube.com/@tjchacking)
 - [**Tib3rius**](https://www.youtube.com/@Tib3rius)
 - [**Michael Sommer**](https://www.youtube.com/@Michael10Sommer)
@@ -24,7 +24,9 @@ Colaboration and suggestions for improvement is always welcomed.
 
 ## More useful resources. I recommend bookmarking them if you haven't already.
 - [**Swisskyrepo Payloads All The Things**](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- [**Hack Tricks - Web App hacking methodology**](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
+- [**Hack Tricks: Web App hacking methodology**](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
+- [**Hack Tricks API Pentesting**](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting)
+- [**API Key Hacks: Checking the validity of some API keys discoverd on Bug Bounties**](https://gitlab.com/gh0s7/keyhacks)
 - [**A collection of tools and resources I put together**](https://github.com/LinuxUser255/RandoHackingStuff#hacking-resources)
 - [**List of links to more useful hacking resources**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
 
