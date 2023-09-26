@@ -28,8 +28,10 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**List of links to more useful hacking resources**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
 
 ## How to use the repo
-- Use it as a jumping off point by loading it, then, right-click open in new tab, any of the links on this readme.
-- Think of it as a point of reference as you go through the labs. Open any of the directories for notes and scripts on the various labs.
+- Bookmark this page and use it as a jumping off point when working on the labs.
+- Right-click open in new tab, any of the links on this readme.
+- Think of it as a point of reference as you go through the labs.
+- Open and explore any of the directories for notes, scripts and resources for any of the challenges.
 
 # Web Academy Learning Path (Click here)
  ![**Portswigger_all-topics**](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/0aafd08e-ca25-4513-9e8b-ae73b2f480ca)
