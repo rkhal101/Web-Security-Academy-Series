@@ -20,6 +20,7 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**TJC Hacking**](https://www.youtube.com/@tjchacking)
 - [**Tib3rius**](https://www.youtube.com/@Tib3rius)
 - [**Michael Sommer**](https://www.youtube.com/@Michael10Sommer)
+- [**Seven Seas Security**](https://www.youtube.com/@7SeasSecurity)
 
 ## More useful resources. I recommend bookmarking them if you haven't already.
 - [**Swisskyrepo Payloads All The Things**](https://github.com/swisskyrepo/PayloadsAllTheThings)
@@ -27,11 +28,11 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**A collection of tools and resources I put together**](https://github.com/LinuxUser255/RandoHackingStuff#hacking-resources)
 - [**List of links to more useful hacking resources**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
 
-## How to use the repo
-- Bookmark this page and use it as a jumping off point when working on the labs.
-- Right-click open in new tab, any of the links on this readme.
-- Think of it as a point of reference as you go through the labs.
-- Open and explore any of the directories for notes, scripts and resources for any of the challenges.
+## How to use this repo
+- **Bookmark this page and use it as a jumping off point when working on the labs.**
+- **Right-click open in new tab, any of the links on this readme.**
+- **Think of it as a point of reference as you go through the labs.**
+- **Open and explore any of the directories for notes, scripts and resources for any of the challenges.**
 
-# Web Academy Learning Path (Click here)
+# Web Academy Learning Path
  ![**Portswigger_all-topics**](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/0aafd08e-ca25-4513-9e8b-ae73b2f480ca)
