@@ -28,7 +28,7 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**Hack Tricks API Pentesting**](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting)
 - [**API Key Hacks: Checking the validity of some API keys discoverd on Bug Bounties**](https://gitlab.com/gh0s7/keyhacks)
 - [**A collection of tools and resources I put together**](https://github.com/LinuxUser255/RandoHackingStuff#hacking-resources)
-- [**List of links to more useful hacking resources**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
+- [**Supplemental resources: Notes, tips, payloads & more**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
 
 ## How to use this repo
 - **Bookmark this page and use it as a jumping off point for the** [**Learning Path.**](https://portswigger.net/web-security/all-topics)
