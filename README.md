@@ -22,7 +22,15 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**Michael Sommer**](https://www.youtube.com/@Michael10Sommer)
 - [**Seven Seas Security**](https://www.youtube.com/@7SeasSecurity)
 
-## More useful resources. I recommend bookmarking them if you haven't already.
+## People, researchers and organizations
+- [**James Kettle (main)**](https://jameskettle.com/)
+- [**James Kettle - Twitter**](https://twitter.com/albinowax)
+- [**Gareth Heys**](https://twitter.com/garethheyes)
+- [**Port Swigger Research**](https://twitter.com/PortSwiggerRes)
+- [**Secure Ideas**](https://twitter.com/secureideasllc)
+- [**INTIGRITI**](https://twitter.com/intigriti)
+
+## More useful resources. I recommend bookmarking for quick access & reference.
 - [**Swisskyrepo Payloads All The Things**](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [**Hack Tricks: Web App hacking methodology**](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
 - [**Hack Tricks API Pentesting**](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting)
