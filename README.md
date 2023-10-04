@@ -23,11 +23,11 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**Seven Seas Security**](https://www.youtube.com/@7SeasSecurity)
 
 ## People, researchers and organizations
-- [**James Kettle (main)**](https://jameskettle.com/)
-- [**James Kettle - Twitter**](https://twitter.com/albinowax)
+- [**James Kettle**](https://jameskettle.com/)
 - [**Gareth Heys**](https://twitter.com/garethheyes)
 - [**Port Swigger Research**](https://twitter.com/PortSwiggerRes)
 - [**Secure Ideas**](https://twitter.com/secureideasllc)
+- [**Jason Haddix - The Bug Hunter's Methodology**](https://github.com/jhaddix/tbhm)
 - [**INTIGRITI**](https://twitter.com/intigriti)
 
 ## More useful resources. I recommend bookmarking for quick access & reference.
