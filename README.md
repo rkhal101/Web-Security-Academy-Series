@@ -35,6 +35,7 @@ Colaboration and suggestions for improvement is always welcomed.
 - [**Hack Tricks: Web App hacking methodology**](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
 - [**Hack Tricks API Pentesting**](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting)
 - [**API Key Hacks: Checking the validity of some API keys discoverd on Bug Bounties**](https://gitlab.com/gh0s7/keyhacks)
+- [**Graudit - Source Code Review cmd line tool**](https://github.com/wireghoul/graudit)
 - [**A collection of tools and resources I put together**](https://github.com/LinuxUser255/RandoHackingStuff#hacking-resources)
 - [**Supplemental resources: Notes, tips, payloads & more**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
 
