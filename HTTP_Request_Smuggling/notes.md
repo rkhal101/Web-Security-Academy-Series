@@ -1,4 +1,4 @@
-## HTTP Request Smuggling / Desync Attacks: HTTP/1 &  HTTP/2
+# HTTP Request Smuggling / Desync Attacks: HTTP/1 &  HTTP/2
 [My YouTube Channel with a Request Smuggling playlist and more](https://www.youtube.com/@infosec5101)
 
 [HackTricks on Request Smuggling](https://github.com/carlospolop/hacktricks/blob/master/pentesting-web/http-request-smuggling/README.md)
@@ -29,7 +29,7 @@ In this doc:
 
 ---
 
-##### CL.TE
+## CL.TE
 Here, the **front-end** server uses the **`Content-Length`** header and the **back-end** server uses the **`Transfer-Encoding`** header. We can perform a simple HTTP request smuggling attack as follows:
 
 ```
@@ -56,7 +56,7 @@ Note how `Content-Length` indicate the **bodies request length is 30 bytes long*
 >
 ---
 
-##### TE.CL
+## TE.CL
 Here, the front-end server uses the `Transfer-Encoding` header and the back-end server uses the `Content-Length` header. (That's why those two headers are in both requests) We can perform a simple HTTP request smuggling attack as follows:
 
 >`POST / HTTP/1.1`  
@@ -76,7 +76,8 @@ Here, the front-end server uses the `Transfer-Encoding` header and the back-end 
 In this case the **reverse-proxy** will **send the whole request** to the **back-end** as the **`Transfer-encoding`** indicates so. But, the **back-end** is going to **process** only the **`7b`** (4bytes) as indicated in the `Content-Lenght` .Therefore, the next request will be the one starting by `GET /404 HTTP/1.1`
 
 ---
-#### _Demo: 
+
+## Demo: 
 - Smuggle a request to the back-end server, so that the next request processed by the back-end server appears to use the method `GPOST`.
 
 - Using the Turbo Intruder TE.CL Attack, Multiple duplicate requests made, in this order:
@@ -124,7 +125,7 @@ x=y
 0
 
 ---
-##### Response: 
+## Response: 
 
 HTTP/1.1 403 Forbidden
 Content-Type: application/json; charset=utf-8
@@ -134,7 +135,7 @@ Content-Length: 27
 "Unrecognized method GPOST"
 
 ---
-##### Turbo Intruder code:
+## Turbo Intruder code:
 
 >`import re
 >
@@ -152,7 +153,7 @@ Content-Length: 27
 
 ---
 
-##### TE.TE behavior: obfuscating the TE header
+## TE.TE behavior: obfuscating the TE header
 
 Here, the front-end and back-end servers both support the `Transfer-Encoding` header, but one of the servers can be induced not to process it by obfuscating the header in some way.
 
@@ -180,15 +181,15 @@ _Depending on whether it is the front-end or the back-end server that can be ind
 
 ---
 
-##### Demo Obfuscating the Transfer Encoding header
+## Demo Obfuscating the Transfer Encoding header
 This demo involves a front-end and back-end server. The two servers handle duplicate HTTP request headers in differently. 
 The front-end server rejects requests that aren't using the GET or POST method.
 
 ##### Goal: smuggle a request to the back-end server, causing the next request processed by the back-end server appears to use the method `GPOST`.
 _Turbo Intruder can be used again here too.
-###### Solving a TE.TE is very similar to a TE.CL
+*Solving a TE.TE is very similar to a TE.CL*
 
-##### The Turbo Intruder payload set up:
+## The Turbo Intruder payload set up:
 
 >` # This will prefix the victim's request. Edit this accordingly.
          `prefix = '''
