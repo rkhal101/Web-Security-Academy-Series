@@ -16,3 +16,5 @@ https://portswigger.net/bappstore/65033cbd2c344fbabe57ac060b5dd100
 ```
 1 UNION SELECT username || '~'  || password  FROM users
 ```
+**Video:**
+[SQL Injection - Lab #17 SQL injection with filter bypass via XML encoding](https://youtu.be/ELdyZm0nK4g?feature=shared)
