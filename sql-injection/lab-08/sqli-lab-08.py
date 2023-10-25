@@ -17,7 +17,7 @@ def exploit_sqli_version(url):
     res = r.text
     soup = BeautifulSoup(res, 'html.parser')
     # use https://regex101.com/ to confirm your regex if needed.
-    version = soup.find(text=re.compile('.*\d{1,2}\.\d{1,2}\.\d{1,2}.*'))
+    version = soup.find(string=re.compile('.*\d{1,2}\.\d{1,2}\.\d{1,2}.*'))
     if version is None:
         return False
     else:
@@ -30,6 +30,7 @@ def main():
     except IndexError:
         print("[-] Usage: %s <url>" % sys.argv[0])
         print("[-] Example: %s www.example.com" %sys.argv[0])
+        print("Leave off the forward slash / at the end of the URL")
         sys.exit(-1)
 
     print("[+] Dumping the version of the database...")
