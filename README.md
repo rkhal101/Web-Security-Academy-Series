@@ -10,6 +10,7 @@ Feel free to suggest any imporvements, submit a pull request, etc, and share wit
 Colaboration and suggestions for improvement is always welcomed.
  
 - [**Click here to vist PortSwigger's Learning Path**](https://portswigger.net/web-security/learning-path)
+- [**Links to the individual practioner-level labs**](https://github.com/LinuxUser255/Web-Security-Academy-Series/blob/main/practitioner-level-labs.md)
 - [**Certification prepare Step 1: practitioner-level labs**](https://portswigger.net/web-security/certification/how-to-prepare/practitioner-labs-prep-step-one)
 - [**Certification prepare Step 2: core web security testing skills**](https://portswigger.net/web-security/certification/how-to-prepare)
 
