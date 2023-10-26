@@ -1,9 +1,4 @@
-# Practitioner-level labs
-
-## List of Practitioner-level labs
-* [Listed practitioner-level labs](https://portswigger.net/web-security/certification/how-to-prepare/practitioner-labs-prep-step-one)
-
-## Links to individual labs
+# Links to individual labs
 
 * [Blind SQL injection with out-of-band data exfiltration](https://portswigger.net/web-security/sql-injection/blind/lab-out-of-band-data-exfiltration)
 * [Forced OAuth profile linking](https://portswigger.net/web-security/oauth/lab-oauth-forced-oauth-profile-linking)
