@@ -10,15 +10,15 @@ Feel free to suggest any imporvements, submit a pull request, etc, and share wit
 Colaboration and suggestions for improvement is always welcomed.
  
 - [**Click here to vist PortSwigger's Learning Path**](https://portswigger.net/web-security/learning-path)
-- [**Links to the individual practioner-level labs**](https://github.com/LinuxUser255/Web-Security-Academy-Series/blob/main/practitioner-level-labs.md)
+
+  ## Preparing for the Certification:
+- [**Links to the Individual Practioner-Level Labs**](https://github.com/LinuxUser255/Web-Security-Academy-Series/blob/main/practitioner-level-labs.md)
 - [**Certification prepare Step 1: practitioner-level labs**](https://portswigger.net/web-security/certification/how-to-prepare/practitioner-labs-prep-step-one)
 - [**Certification prepare Step 2: core web security testing skills**](https://portswigger.net/web-security/certification/how-to-prepare)
 
 ## Web Academy video walkthroughs & explanations.
-- [**Rana Khalil's Web Security video series**](https://www.youtube.com/@RanaKhalil101) 
+- [**Rana Khalil's Web Security Academy Series**](https://www.youtube.com/@RanaKhalil101) 
 - [**InfoSec GSO**](https://www.youtube.com/@infosec5101/featured)
-- [**HTTP Request Smuggling walkthroughs and tutorials H/1 & H/2**](https://youtube.com/playlist?list=PLdj6yMJxBJ6J_p9fqiE3prN7BQGP0WZN7)
-- [**TJC Hacking**](https://www.youtube.com/@tjchacking)
 - [**Tib3rius**](https://www.youtube.com/@Tib3rius)
 - [**Michael Sommer**](https://www.youtube.com/@Michael10Sommer)
 - [**Seven Seas Security**](https://www.youtube.com/@7SeasSecurity)
