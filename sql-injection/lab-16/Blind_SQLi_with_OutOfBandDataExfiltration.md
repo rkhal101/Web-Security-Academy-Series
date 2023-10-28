@@ -74,3 +74,8 @@ username
 
 password
 `3pdm0kmm3be2otrzu11u`
+
+**See the ORACLE SQL Language Reference to make sense of the SQLi**
+
+[Concatenation Operator || ](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Concatenation-Operator.html#GUID-08C10738-706B-4290-B7CD-C279EBC90F7E)
+
