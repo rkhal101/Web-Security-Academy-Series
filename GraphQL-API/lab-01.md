@@ -2,9 +2,9 @@
 
 **Level: APPRENTICE**
 
->The blog page for this lab contains a hidden blog post that has a secret password.
+### The blog page for this lab contains a hidden blog post that has a secret password.
 
-**To solve the lab, find the hidden blog post and enter the password.**
+### To solve the lab, find the hidden blog post and enter the password.
 
 >We recommend that you install the InQL extension before attempting this lab. InQL makes it easier to modify GraphQL queries in Repeater, and enables you to scan the API schema.
 
@@ -35,9 +35,13 @@ There are different ways, but I liked this one:
 12. and anything 6 and up has a 400
 
 Therefore, `GET /post?postId=3` is the hidden one you need to reveal
-How?
-Send one of the GraphQL queries `POST /graphql/v1` | `web-security-academy.net/graphql/v1` to the repeater,
-**Request**
+
+So How do you do that?
+
+Send one of the GraphQL queries `POST /graphql/v1`  `web-security-academy.net/graphql/v1` to the repeater.
+
+The request should look like this:
+
 ```json
 POST /graphql/v1 HTTP/2
 Host: 0a3d00730319c7918190935f002e00b5.web-security-academy.net
@@ -71,7 +75,9 @@ then,
  `web-security-academy.net/graphql/v1`
  
  Click Analyze, and open the `getBlogPosts.graphql` page and send it to repeater.
- Once that request is in the repeater request tab, it should look like this:
+ Once that request is in the repeater request tab. 
+ 
+ It should look like this:
 ```json
 POST /graphql/v1 HTTP/2
 Host: 0a3d00730319c7918190935f002e00b5.web-security-academy.net
