@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 
 """
+main.py
+
+SYNOPSIS
+========
+::
+
 Object-Oriented Python program that can make GET & POST requests.
 Makes a request to a user supplied URL, uses the try-except block to handle errors,
 and the conditional if-elif-else block to check the status of the request.
