@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
 
+"""
+Python script for Web-Security-Academy XXE lab 01
+Lab URL: https://portswigger.net/web-security/xxe/lab-exploiting-xxe-to-retrieve-files
+
+SYNOPSIS
+========
+
+::
+
+  ./xxe-injection-lab-01.py https://web-security-academy.net
+
+DESCRIPTION
+===========
+XXE exploit script used to display the contents of /etc/passwd.
+
+"""
+
 import requests
 import sys
 import urllib3
@@ -29,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
