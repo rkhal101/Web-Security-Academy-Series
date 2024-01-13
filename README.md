@@ -1,4 +1,4 @@
-# Web Security Academy Series: [Web Academy Learning Path](https://portswigger.net/web-security/all-topics)
+# Web Security Academy Series: [Web Academy](https://portswigger.net/web-security/all-topics)
 
 This is a forked repo of [**rkhal101's original Web Security Academy Series.**](https://github.com/rkhal101/Web-Security-Academy-Series)
 
