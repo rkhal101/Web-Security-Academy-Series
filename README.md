@@ -20,7 +20,7 @@ Colaboration and suggestions for improvement is always welcomed. [**Click here t
 ## Web Academy videos: walkthrough & explanations. 
 - [**Rana Khalil's Web Security Academy Series**](https://www.youtube.com/@RanaKhalil101) 
 - [**Michael Sommer**](https://www.youtube.com/@Michael10Sommer)
-- (More video links at the bottom of this README)
+- **_! More video links at the bottom of this README !_**
 
 
 ## Useful resources. I recommend bookmarking for quick access & reference.
