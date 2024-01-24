@@ -1,6 +1,7 @@
 # Links to API resources
 
 ## Articles & tutorials
+- [API Testing - PortSwigger](https://portswigger.net/web-security/api-testing)
 - <https://danaepp.com/how-to-detect-the-programming-language-of-an-api>
 - <https://danaepp.com/the-bug-bounty-dilemma-when-to-give-up-on-an-api-target>
 - <https://danaepp.com/beginners-guide-to-api-hacking>
