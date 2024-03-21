@@ -1,3 +1,4 @@
+
 # [Lab: JWT authentication bypass via unverified signature](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature)
 
 - This lab uses a JWT-based mechanism for handling sessions.
