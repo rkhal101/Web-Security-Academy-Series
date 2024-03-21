@@ -10,8 +10,7 @@
 
   ## Must edit the user name in the JWT sub claim
   - ### Login as peter, and send the request `GET /my-account?id=wiener` to the repeater
-  - ### Highlight the Payload Data section of the JWT, (string of chars in the between the two . .)
-
+  - ### Highlight the Payload Data section of the JWT
      </br>
  
 ![jwt-lab-01-jwt-sub-highlite](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/e0faee7b-883b-4a52-ace7-61b8772292a9)
