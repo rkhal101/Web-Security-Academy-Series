@@ -47,9 +47,10 @@ Colaboration and suggestions for improvement is always welcomed. [**Click here t
 - [**Certification prepare Step 2: core web security testing skills**](https://portswigger.net/web-security/certification/how-to-prepare)
 
 
+# [Web Security Academy Learning Path](https://portswigger.net/web-security/all-topics)![WebSecurityAcademyLogo](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/8d72f007-9461-45c3-b8c3-d1966954d98e)
 
-# [Web Academy Learning Path](https://portswigger.net/web-security/all-topics)
- ![**Portswigger_all-topics**](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/0aafd08e-ca25-4513-9e8b-ae73b2f480ca)
+
+ 
 
 ### More videos
 - [**Seven Seas Security**](https://www.youtube.com/@7SeasSecurity)
