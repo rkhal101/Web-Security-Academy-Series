@@ -1,4 +1,5 @@
 ## [Lab-02: Exploiting a mass assignment vulnerability](https://portswigger.net/web-security/api-testing/lab-exploiting-mass-assignment-vulnerability)
+**Mass Assignment vulnerabilities are present when an attacker is able to overwrite object properties that they should not be able to.**
 To solve the lab, find and exploit a mass assignment vulnerability to buy a **Lightweight l33t Leather Jacket**. You can log in to your own account using the following credentials: `wiener:peter`.
 almost identical to 1
 
