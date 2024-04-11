@@ -42,7 +42,7 @@ Send one of the GraphQL queries `POST /graphql/v1`  `web-security-academy.net/gr
 
 The request should look like this:
 
-```json
+```HTTP
 POST /graphql/v1 HTTP/2
 Host: 0a3d00730319c7918190935f002e00b5.web-security-academy.net
 Cookie: session=D2XpAN8wg0l2tfdFMV0X6DcQUPGWieHx
@@ -78,7 +78,7 @@ then,
  Once that request is in the repeater request tab. 
  
  It should look like this:
-```json
+```HTTP
 POST /graphql/v1 HTTP/2
 Host: 0a3d00730319c7918190935f002e00b5.web-security-academy.net
 Content-Type: application/json
@@ -92,7 +92,7 @@ The response should be the 3rd post, and the `"postPassword": "itsarandomstringo
 will be at the bottom
 
 **The edited request**
-```json
+```HTTP
 POST /graphql/v1 HTTP/2
 Host: 0a3d00730319c7918190935f002e00b5.web-security-academy.net
 Content-Type: application/json
