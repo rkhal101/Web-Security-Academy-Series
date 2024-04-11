@@ -62,6 +62,18 @@ query {
 - But first, right-click on that getUser.graphql query and send to Repeater
 - Then, change Int! to 1
 - Guessing 1 is the administarator's id number
+```'GraphQL
+query {
+    getUser(id: 1) {
+        id
+        password
+        username
+    }
+}
+```
+
+
+
 
 #### Send the request:
 ```HTTP
