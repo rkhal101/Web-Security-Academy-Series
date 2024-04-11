@@ -11,10 +11,10 @@ To solve the lab, sign in as the administrator and delete the username carlos
 
 ```
 
-### - There is an access control vulnerability.
-### - Induce the API to reveal user credential fields
+- ### There is an access control vulnerability.
+- ### Induce the API to reveal user credential fields
 
-
+<br>
 
 1. Login as peter
 2. Send the login Post request to Repeater
@@ -35,10 +35,14 @@ Referer: https://0ad600ae033e31fd80d82b1400e00015.web-security-academy.net/login
 $input) {\n            token\n            success\n        }\n
 }","operationName":"login","variables":{"input":{"username":"wiener","password":"peter"}}}
 ```
+<br>
 
-Right-click -> extensions -> InQL GraphQL Scanner -> Generate Queries with InQL scanner
-Click on the InQL tab, and open the folder for the scan you just did
-Then select: queries -> getUser.graphql
+**NEXT**
+> Right-click -> extensions -> InQL GraphQL Scanner -> Generate Queries with InQL scanner
+> Click on the InQL tab, and open the folder for the scan you just did
+> Then select: queries -> getUser.graphql
+
+<br>
 
 #### This reveals in the window on the rignt the query:
 ```'GraphQL
@@ -50,12 +54,14 @@ query {
     }
 }
 ```
+<br>
+
 - **Because the goal is to Induce the API to reveal user credential fields**
 - **Then that means that the query above means you gotta substitute the Int! for an actual number**
 
 - But first, right-click on that getUser.graphql query and send to Repeater
 - Then, change Int! to 1
-- Guessing 1 is the administarators id number
+- Guessing 1 is the administarator's id number
 
 #### Send the request:
 ```HTTP
