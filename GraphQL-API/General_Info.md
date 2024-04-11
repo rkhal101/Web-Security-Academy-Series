@@ -93,7 +93,7 @@ To avoid over-fetching, you can modify the GQL request to only retrieve certain 
 
 ### GraphQL exposes this schema information via the Introspection Query
 ### Request:
-```HTTP
+```GraphQL
 query IntrospectionQuery {
   __schema {
     queryType {
@@ -246,6 +246,299 @@ fragment TypeRef on __Type {
     }
   }
 }
+```
+
+### Inrospection Queries continued
+```GraphQL
+query InrospectionQuery {
+  __schema {
+    queryType {name}
+    mutationType {name}
+    subscriptionType { name}
+    types {
+      kind
+      name
+      fields {
+        name
+          args {
+          name
+        }
+      }
+    }
+  }
+}
+```
+
+```GraphQL
+{
+  "data": {
+    "__schema": {
+      "queryType": {
+        "name": "Query"
+      },
+      "mutationType": null,
+      "subscriptionType": null,
+      "types": [
+        {
+          "kind": "OBJECT",
+          "name": "Query",
+          "fields": [
+            {
+              "name": "users",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "UserObject",
+          "fields": [
+            {
+              "name": "id",
+              "args": []
+            },
+            {
+              "name": "username",
+              "args": []
+            },
+            {
+              "name": "first_name",
+              "args": []
+            },
+            {
+              "name": "last_name",
+              "args": []
+            },
+            {
+              "name": "state",
+              "args": []
+            },
+            {
+              "name": "email",
+              "args": []
+            },
+            {
+              "name": "history",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "SCALAR",
+          "name": "ID",
+          "fields": null
+        },
+        {
+          "kind": "SCALAR",
+          "name": "String",
+          "fields": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "HistoryObject",
+          "fields": [
+            {
+              "name": "id",
+              "args": []
+            },
+            {
+              "name": "last_login_timestamp",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "__Schema",
+          "fields": [
+            {
+              "name": "types",
+              "args": []
+            },
+            {
+              "name": "queryType",
+              "args": []
+            },
+            {
+              "name": "mutationType",
+              "args": []
+            },
+            {
+              "name": "subscriptionType",
+              "args": []
+            },
+            {
+              "name": "directives",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "__Type",
+          "fields": [
+            {
+              "name": "kind",
+              "args": []
+            },
+            {
+              "name": "name",
+              "args": []
+            },
+            {
+              "name": "description",
+              "args": []
+            },
+            {
+              "name": "fields",
+              "args": [
+                {
+                  "name": "includeDeprecated"
+                }
+              ]
+            },
+            {
+              "name": "interfaces",
+              "args": []
+            },
+            {
+              "name": "possibleTypes",
+              "args": []
+            },
+            {
+              "name": "enumValues",
+              "args": [
+                {
+                  "name": "includeDeprecated"
+                }
+              ]
+            },
+            {
+              "name": "inputFields",
+              "args": []
+            },
+            {
+              "name": "ofType",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "ENUM",
+          "name": "__TypeKind",
+          "fields": null
+        },
+        {
+          "kind": "SCALAR",
+          "name": "Boolean",
+          "fields": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "__Field",
+          "fields": [
+            {
+              "name": "name",
+              "args": []
+            },
+            {
+              "name": "description",
+              "args": []
+            },
+            {
+              "name": "args",
+              "args": []
+            },
+            {
+              "name": "type",
+              "args": []
+            },
+            {
+              "name": "isDeprecated",
+              "args": []
+            },
+            {
+              "name": "deprecationReason",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "__InputValue",
+          "fields": [
+            {
+              "name": "name",
+              "args": []
+            },
+            {
+              "name": "description",
+              "args": []
+            },
+            {
+              "name": "type",
+              "args": []
+            },
+            {
+              "name": "defaultValue",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "__EnumValue",
+          "fields": [
+            {
+              "name": "name",
+              "args": []
+            },
+            {
+              "name": "description",
+              "args": []
+            },
+            {
+              "name": "isDeprecated",
+              "args": []
+            },
+            {
+              "name": "deprecationReason",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "__Directive",
+          "fields": [
+            {
+              "name": "name",
+              "args": []
+            },
+            {
+              "name": "description",
+              "args": []
+            },
+            {
+              "name": "locations",
+              "args": []
+            },
+            {
+              "name": "args",
+              "args": []
+            }
+          ]
+        },
+        {
+          "kind": "ENUM",
+          "name": "__DirectiveLocation",
+          "fields": null
+        }
+      ]
+    }
+  }
+}
+
 ```
 
 ### GraphQL Hacking Tools
