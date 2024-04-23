@@ -16,7 +16,7 @@ def exploit_sqli_version(url):
     if "Oracle Database" in res:
         print("[+] Found the database version.")
         soup = BeautifulSoup(res,'html.parser')
-        version = soup.find(text=re.compile('.*Oracle\sDatabase.*'))
+        version = soup.find(string=re.compile('.*Oracle Database*'))
         print("[+] The Oracle database version is: " + version)
         return True
     return False
