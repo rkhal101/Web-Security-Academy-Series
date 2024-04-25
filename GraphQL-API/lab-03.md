@@ -13,12 +13,6 @@ I decided to run an active scan to see if that could discover an api endpoint it
 ```HTTP
 GET /api?query=query%7b__typename%7d HTTP/2
 Host: 0a7500a5048f1d4881dc76a500e100e4.web-security-academy.net
-Accept-Encoding: gzip, deflate, br
-Accept: */*
-Accept-Language: en-US;q=0.9,en;q=0.8
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.122 Safari/537.36
-Connection: close
-Cache-Control: max-age=0
 Cookie: session=GK55sNu9PbFaURJWf1TqFc6bf1znx72m
 ```
 
@@ -53,11 +47,6 @@ OK, cool, let's send the request in repeater:
 ```HTTP
 GET /api?query=query%7b__schema%0a+%7bqueryType%7bname%7d%7d%7d HTTP/2
 Host: 0a7500a5048f1d4881dc76a500e100e4.web-security-academy.net
-Accept-Encoding: gzip, deflate, br
-Accept: */*
-Accept-Language: en-US;q=0.9,en;q=0.8
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.122 Safari/537.36
-Cache-Control: max-age=0
 Cookie: session=GK55sNu9PbFaURJWf1TqFc6bf1znx72m
 ```
 
