@@ -82,22 +82,22 @@ This is where I hit a wall, so I checked PortSwigger's article on [Bypassing Gra
 ---
 ## But first, lets make sure we understand what introspection.
 
-**" Introspection is a feature in GraphQL that allows it to describe it's own data to the client**
+**" Introspection is a feature in GraphQL that allows it to describe it's own data to the client "**
 
 **" Introspection let's clients query a GraphQL Server for info about it's
 underlying schema, which includes data such as queries, mutations, subscriptions,
-directives, types, fields, and more.** "
+directives, types, fields, and more. "**
 
 **" Introspection provides access to information about queries, mutations,
 subscriptions, fields, objects, and so on through the  ` __schema`  meta-field. This
 can be abused to disclose info about the app's schema. "**
  
-**_- Black Hat GraphQL, Next Generation APIs_
+**- _Black Hat GraphQL, Next Generation APIs_**
 `pages 33, 63, 99`
 
 
-**" Introspection is a built-in GraphQL function that enables you to query a server for information about the schema. It is commonly used by applications such as GraphQL IDEs and documentation generation tools. 
-Like regular queries, you can specify the fields and structure of the response you want to be returned. 
+**" Introspection is a built-in GraphQL function that enables you to query a server for information about the schema. It is commonly used by applications such as GraphQL IDEs and documentation generation tools.** 
+**Like regular queries, you can specify the fields and structure of the response you want to be returned.** 
 
 **For example, you might want the response to only contain the names of available mutations.
 Introspection can represent a serious information disclosure risk, as it can be
@@ -124,7 +124,7 @@ and commas, as they are ignored by GraphQL but not by flawed regex.**
 As such, if the developer has only excluded `__schema{`, then the below introspection query would not be excluded.
 
 **Introspection query with newline** 
-```JSON
+```
 { 
 	"query": "query{__schema 
 	{queryType{name}}}" 
