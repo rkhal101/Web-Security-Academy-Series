@@ -38,6 +38,7 @@ and the collaborator should be able to accept connections from the lab
 This shouldn't of been an issue, but it was.
 
 **I Created every Permutation of the command that should return the desired result:**
+<br>
 There is a list of all permutations below for your convienience to copy-paste.
 
 If you encounter this issue, try this work around
@@ -64,6 +65,8 @@ DNS queries to the collaborator, one of which was the whoami command
 
 then just copy-paste `peter-ZxIdda` into the submit solution
 and that's it, solved.
+
+<br>
 
 ## List of cmd injection payloads I created and URL encoded for the intruder
 You can use this too, just be sure to substutue the collab address here
@@ -110,17 +113,26 @@ in my .bashrc and .zshrc dot files
 
 ## Again, be sure to substutue the collab address in this example with your collab address.
 
+## Steps to solve the lab:
+
 **1. Paste your list of URL encoded permutated whoami with out of bounds commnds in to the Intruder payload list**
+
 <br>
+
 **2. Select the Attack type: Sniper**
+
 <br>
-**3. Select the email parameter for the payload position & leave it's value blank** 
+
+**3. Select the email parameter for the payload position & leave it's value blank `email=§§`** 
 <br>
   (this is because each payload will be injected here)
+ 
   <br>
+  
 **4. Then run the Attack**
 
 <br>
 
 ## The End
 
+<br>
