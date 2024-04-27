@@ -165,8 +165,17 @@ In an unsandboxed environment, achieving remote code execution and using it to r
 ## Steps to take in to exploit SSTI
 - Read about the security implications
 In addition to providing the fundamentals of how to create and use templates, the documentation may also provide some sort of "Security" section. The name of this section will vary, but it will usually outline all the potentially dangerous things that people should avoid doing with the template. This can be an invaluable resource, even acting as a kind of cheat sheet for which behaviors you should look for during auditing, as well as how to exploit them.
+## [HackTricks-SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection)
 
+## Documentation for various templates
 ### [ERB-Ruby Documentation](https://docs.ruby-lang.org/en/2.3.0/ERB.html)
+### [Tornado](https://www.tornadoweb.org/en/stable/)
+### [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+### [Mako](https://docs.makotemplates.org/en/latest/)
+### [NunJucks](https://mozilla.github.io/nunjucks/getting-started.html)
+### [Pug](https://pugjs.org/api/getting-started.html)
+### [Razor](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio)
+### [GOMPLATE](https://docs.gomplate.ca/)
 
 Even if there is no dedicated "Security" section, if a particular built-in object or function can pose a security risk, there is almost always a warning of some kind in the documentation. The warning may not provide much detail, but at the very least it should flag this particular built-in as something to investigate.
 
