@@ -166,8 +166,9 @@ In an unsandboxed environment, achieving remote code execution and using it to r
 - Read about the security implications
 In addition to providing the fundamentals of how to create and use templates, the documentation may also provide some sort of "Security" section. The name of this section will vary, but it will usually outline all the potentially dangerous things that people should avoid doing with the template. This can be an invaluable resource, even acting as a kind of cheat sheet for which behaviors you should look for during auditing, as well as how to exploit them.
 ## [HackTricks-SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection)
+## [SwissKey Repo-SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md)
 
-## Documentation for various templates
+# Documentation for various templates
 ### [ERB-Ruby Documentation](https://docs.ruby-lang.org/en/2.3.0/ERB.html)
 ### [Tornado](https://www.tornadoweb.org/en/stable/)
 ### [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
