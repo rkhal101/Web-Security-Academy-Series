@@ -1,21 +1,23 @@
 
 # Server Side Template Injection
 
-### What is SSTI ?
+## What is SSTI ?
 Server-side template injection is when an attacker is able to use native template syntax to inject a malicious payload into a template, which is then executed server-side.
 
 Template engines are designed to generate web pages by combining fixed templates with volatile data. Server-side template injection attacks can occur when user input is concatenated directly into a template, rather than passed in as data. This allows attackers to inject arbitrary template directives in order to manipulate the template engine, often enabling them to take complete control of the server. As the name suggests, server-side template injection payloads are delivered and evaluated server-side, potentially making them much more dangerous than a typical client-side template injection.
 
 <br>
 
-### SSTI impact ?
+## SSTI impact ?
 Server-side template injection vulnerabilities can expose websites to a variety of attacks depending on the template engine in question and how exactly the application uses it. In certain rare circumstances, these vulnerabilities pose no real security risk. However, most of the time, the impact of server-side template injection can be catastrophic.
 
 At the severe end of the scale, an attacker can potentially achieve remote code execution, taking full control of the back-end server and using it to perform other attacks on internal infrastructure.
 
 Even in cases where full remote code execution is not possible, an attacker can often still use server-side template injection as the basis for numerous other attacks, potentially gaining read access to sensitive data and arbitrary files on the server.
 
-### How SSTI Vulns arise
+<br>
+
+## How SSTI Vulns arise
 Server-side template injection vulnerabilities arise when user input is concatenated into templates rather than being passed in as data.
 
 Static templates that simply provide placeholders into which dynamic content is rendered are generally not vulnerable to server-side template injection. The classic example is an email that greets each user by their name, such as the following extract from a Twig template used with PHP
@@ -68,8 +70,9 @@ In this example, instead of a static value being passed into the template, part 
 
 
 ## Constructing a server-side template injection attack
-![[ssti-methodology-diagram 1.png]]
+![ssti-methodology-diagram](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/ffd0699b-049a-490d-abbc-d38aaee179d6)
 
+<br>
 
 ### Detect
 As with any vulnerability, the first step towards exploitation is being able to find it. Perhaps the simplest initial approach is to try fuzzing the template by injecting a sequence of special characters commonly used in template expressions, such as `${{<%[%'"}}%\`. If an exception is raised, this indicates that the injected template syntax is potentially being interpreted by the server in some way. This is one sign that a vulnerability to server-side template injection may exist.
@@ -127,7 +130,8 @@ which version. For example, the invalid expression `<%=foobar%>`
 - Then observe if they are successfully evaluated.
 
 ### SSTI  decision tree
-![[template-decision-tree 2.png]]
+![template-decision-tree](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/4858a03f-14a4-48ec-b8b9-806736094769)
+
 
 ### Exploit
 
@@ -156,8 +160,10 @@ Overall, this code snippet appears to be attempting to execute a shell command (
 
 In an unsandboxed environment, achieving remote code execution and using it to read, edit, or delete arbitrary files is similarly as simple in many common template engines.
 
-**Steps to take in to exploit SSTI**
-### Read about the security implications
+<br>
+
+### Steps to take in to exploit SSTI
+- Read about the security implications
 In addition to providing the fundamentals of how to create and use templates, the documentation may also provide some sort of "Security" section. The name of this section will vary, but it will usually outline all the potentially dangerous things that people should avoid doing with the template. This can be an invaluable resource, even acting as a kind of cheat sheet for which behaviors you should look for during auditing, as well as how to exploit them.
 
 Even if there is no dedicated "Security" section, if a particular built-in object or function can pose a security risk, there is almost always a warning of some kind in the documentation. The warning may not provide much detail, but at the very least it should flag this particular built-in as something to investigate.
@@ -168,6 +174,7 @@ For example, in ERB, the documentation reveals that you can list all directories
 ```
 
 <br>
+
 ### Look for known exploits
 
 Another key aspect of exploiting server-side template injection vulnerabilities is being good at finding additional resources online. Once you are able to identify the template engine being used, you should browse the web for any vulnerabilities that others may have already discovered.
@@ -190,14 +197,20 @@ This code is retrieving an environment variable using Java's built-in functional
 
 Overall, this code snippet is retrieving environment variables using Java's `System.getenv()` method within a JSP or a similar Java environment that supports embedded Java code. It's a way to access environment variables dynamically within the application.
 
+<br>
+
 ### Developer-supplied objects
 
 It is important to note that websites will contain both built-in objects provided by the template and custom, site-specific objects that have been supplied by the web developer. You should pay particular attention to these non-standard objects because they are especially likely to contain sensitive information or exploitable methods. As these objects can vary between different templates within the same website, be aware that you might need to study an object's behavior in the context of each distinct template before you find a way to exploit it.
+
+<br>
 
 ## Create a custom attack
 For example, you might find that the template engine executes templates inside a sandbox, which can make exploitation difficult, or even impossible.
 
 After identifying the attack surface, if there is no obvious way to exploit the vulnerability, you should proceed with traditional auditing techniques by reviewing each function for exploitable behavior. By working methodically through this process, you may sometimes be able to construct a complex attack that is even able to exploit more secure targets.
+
+<br>
 
 ### Constructing a custom exploit using an object chain
 
@@ -223,8 +236,13 @@ Let's break it down:
 
 Overall, this code appears to be an attempt to exploit the Java Runtime environment to execute potentially harmful actions. It's important to note that executing arbitrary commands like this can lead to severe security vulnerabilities and should never be done in production or on any system where security is a concern.
 
+<br>
+
 ### Constructing a custom exploit using developer-supplied objects
 
 Some template engines run in a secure, locked-down environment by default in order to mitigate the associated risks as much as possible. Although this makes it difficult to exploit such templates for remote code execution, developer-created objects that are exposed to the template can offer a further, less battle-hardened attack surface.
 
 However, while substantial documentation is usually provided for template built-ins, site-specific objects are almost certainly not documented at all. Therefore, working out how to exploit them will require you to investigate the website's behavior manually to identify the attack surface and construct your own custom exploit accordingly.
+
+<br>
+
