@@ -147,7 +147,7 @@ Learning the basic syntax is obviously important, along with key functions and h
 		%> 
 		${x}
 ```
-This code snippet appears to be written in an Embedded Ruby (ERB) template, which is often used in web development frameworks like Ruby on Rails to embed Ruby code within HTML templates. Let's break down what it's doing:
+Embedded Ruby (ERB) template, which is often used in web development frameworks like Ruby on Rails to embed Ruby code within HTML templates. Let's break down what it's doing:
 
 1. `<% import os x=os.popen('id').read() %>`: This line starts with `<%`, which is the opening tag for embedded Ruby code in an ERB template. The code inside the tag is executed on the server side when the template is rendered. 
 
@@ -234,7 +234,7 @@ For example, in the Java-based template engine Velocity, you have access to a `
 $class.inspect("java.lang.Runtime").type.getRuntime().exec("bad-stuff-here")
 ```
 
-The code you've provided appears to be a mix of pseudo-code and potentially harmful commands. It seems to be attempting to execute malicious code using the Java Runtime class.
+The code: mix of pseudo-code attempting to execute malicious code using the Java Runtime class.
 
 Let's break it down:
 
