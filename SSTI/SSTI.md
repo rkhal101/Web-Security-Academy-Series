@@ -74,7 +74,7 @@ In this example, instead of a static value being passed into the template, part 
 
 <br>
 
-### Detect
+## Detect
 As with any vulnerability, the first step towards exploitation is being able to find it. Perhaps the simplest initial approach is to try fuzzing the template by injecting a sequence of special characters commonly used in template expressions, such as `${{<%[%'"}}%\`. If an exception is raised, this indicates that the injected template syntax is potentially being interpreted by the server in some way. This is one sign that a vulnerability to server-side template injection may exist.
 #### Plaintext context
 Most template languages allow you to freely input content either by using HTML tags directly or by using the template's native syntax, which will be rendered to HTML on the back-end before the HTTP response is sent. For example, in Freemarker, the line `render('Hello ' + username)` would render to something like `Hello Carlos`.
@@ -91,7 +91,7 @@ If the resulting output contains `Hello 49`, this shows that the mathematical o
 
 Note that the specific syntax required to successfully evaluate the mathematical operation will vary depending on which template engine is being used. We'll discuss this in more detail in the [Identify](https://portswigger.net/web-security/server-side-template-injection#identify) step.
 
-#### Code context
+## Code context
 In other cases, the vulnerability is exposed by user input being placed within a template expression, as we saw earlier with our email example. This may take the form of a user-controllable variable name being placed inside a parameter, such as:
 `greeting = getQueryParameter('greeting') engine.render("Hello {{"+greeting+"}}", data)`
 
@@ -109,7 +109,7 @@ In the absence of XSS, this will usually either result in a blank entry in the o
 If this again results in an error or blank output, you have either used syntax from the wrong templating language or, if no template-style syntax appears to be valid, server-side template injection is not possible. Alternatively, if the output is rendered correctly, along with the arbitrary HTML, this is a key indication that a server-side template injection vulnerability is present:
 `Hello Carlos<tag>`
 
-### Identify
+## Identify
  After identification, the next step is to identify the template engine many of
  Many Template Engines use very similar syntax that is specifically chosen not to clash with HTML
  characters. As a result, it can be relatively simple to create probing payloads
@@ -133,7 +133,7 @@ which version. For example, the invalid expression `<%=foobar%>`
 ![template-decision-tree](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/4858a03f-14a4-48ec-b8b9-806736094769)
 
 
-### Exploit
+## Exploit
 
 ### Learn the basic template syntax
 
@@ -162,9 +162,11 @@ In an unsandboxed environment, achieving remote code execution and using it to r
 
 <br>
 
-### Steps to take in to exploit SSTI
+## Steps to take in to exploit SSTI
 - Read about the security implications
 In addition to providing the fundamentals of how to create and use templates, the documentation may also provide some sort of "Security" section. The name of this section will vary, but it will usually outline all the potentially dangerous things that people should avoid doing with the template. This can be an invaluable resource, even acting as a kind of cheat sheet for which behaviors you should look for during auditing, as well as how to exploit them.
+
+### [ERB-Ruby Documentation](https://docs.ruby-lang.org/en/2.3.0/ERB.html)
 
 Even if there is no dedicated "Security" section, if a particular built-in object or function can pose a security risk, there is almost always a warning of some kind in the documentation. The warning may not provide much detail, but at the very least it should flag this particular built-in as something to investigate.
 
@@ -175,12 +177,10 @@ For example, in ERB, the documentation reveals that you can list all directories
 
 <br>
 
-### Look for known exploits
-
+## Look for known exploits
 Another key aspect of exploiting server-side template injection vulnerabilities is being good at finding additional resources online. Once you are able to identify the template engine being used, you should browse the web for any vulnerabilities that others may have already discovered.
 
 ## Explore
-
 At this point, you might have already stumbled across a workable exploit using the documentation. If not, the next step is to explore the environment and try to discover all the objects to which you have access.
 
 Many template engines expose a "self" or "environment" object of some kind, which acts like a namespace containing all objects, methods, and attributes that are supported by the template engine. If such an object exists, you can potentially use it to generate a list of objects that are in scope. For example, in Java-based templating languages, you can sometimes list all variables in the environment using the following injection:
@@ -199,7 +199,7 @@ Overall, this code snippet is retrieving environment variables using Java's `Sys
 
 <br>
 
-### Developer-supplied objects
+## Developer-supplied objects
 
 It is important to note that websites will contain both built-in objects provided by the template and custom, site-specific objects that have been supplied by the web developer. You should pay particular attention to these non-standard objects because they are especially likely to contain sensitive information or exploitable methods. As these objects can vary between different templates within the same website, be aware that you might need to study an object's behavior in the context of each distinct template before you find a way to exploit it.
 
@@ -212,7 +212,7 @@ After identifying the attack surface, if there is no obvious way to exploit the 
 
 <br>
 
-### Constructing a custom exploit using an object chain
+## Constructing a custom exploit using an object chain
 
 As described above, the first step is to identify objects and methods to which you have access. Some of the objects may immediately jump out as interesting. By combining your own knowledge and the information provided in the documentation, you should be able to put together a shortlist of objects that you want to investigate more thoroughly.
 
@@ -238,7 +238,7 @@ Overall, this code appears to be an attempt to exploit the Java Runtime environm
 
 <br>
 
-### Constructing a custom exploit using developer-supplied objects
+## Constructing a custom exploit using developer-supplied objects
 
 Some template engines run in a secure, locked-down environment by default in order to mitigate the associated risks as much as possible. Although this makes it difficult to exploit such templates for remote code execution, developer-created objects that are exposed to the template can offer a further, less battle-hardened attack surface.
 
