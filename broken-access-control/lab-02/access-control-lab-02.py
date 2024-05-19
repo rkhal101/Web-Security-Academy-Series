@@ -17,7 +17,7 @@ def delete_user(url):
 
     # Retrieve the admin path
     soup = BeautifulSoup(r.text, 'lxml')
-    admin_instances = soup.find(text=re.compile("/admin-"))
+    admin_instances = soup.find(string=re.compile("/admin-"))
     admin_path = re.search("href', '(.*)'", admin_instances).group(1)
     
     # Delete Carlos user
