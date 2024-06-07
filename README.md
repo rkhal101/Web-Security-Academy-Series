@@ -33,6 +33,8 @@ Colaboration and suggestions for improvement is always welcomed. [**Click here t
 - [**Graudit - Source Code Review cmd line tool**](https://github.com/wireghoul/graudit)
 - [**A collection of tools and resources I put together**](https://github.com/LinuxUser255/RandoHackingStuff#hacking-resources)
 - [**Supplemental resources: Notes, tips, payloads & more**](https://github.com/LinuxUser255/RandoHackingStuff/blob/main/useful_links.md)
+- [**OWASP Top Ten 2021 - WebApp**](https://owasp.org/www-project-top-ten/)
+- [**OWASP Top Ten 2023 - API**](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
 
 ## People, researchers and organizations
 - [**James Kettle**](https://jameskettle.com/)
