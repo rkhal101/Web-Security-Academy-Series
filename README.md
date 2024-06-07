@@ -25,6 +25,7 @@ Colaboration and suggestions for improvement is always welcomed. [**Click here t
 
 
 ## Useful resources. I recommend bookmarking for quick access & reference.
+- [**Map the App**](https://github.com/LinuxUser255/Web-Security-Academy-Series/blob/main/MapTheApp.png)
 - [**Swisskyrepo Payloads All The Things**](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [**Hack Tricks: Web App hacking methodology**](https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology)
 - [**Hack Tricks API Pentesting**](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting)
