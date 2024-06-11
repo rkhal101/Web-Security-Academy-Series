@@ -134,6 +134,17 @@ The reason this works is that the browser first performs HTML parsing to identif
 
 </br>
 
+### XSS into JavaScript lab example  
+
+![xss-js-context-01](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/ada27410-d5c2-407d-81b7-07c07bce7c7d)
+
+
+
+![xss-js-contex-02](https://github.com/LinuxUser255/Web-Security-Academy-Series/assets/46334926/57d2646f-f742-48bf-ba54-493d28110fb0)
+
+
+</br>
+
 ## Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded & single quotes escaped
 
 Some applications attempt to prevent input from breaking out of the JavaScript
