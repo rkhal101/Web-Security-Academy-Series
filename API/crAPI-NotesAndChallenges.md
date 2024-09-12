@@ -4,6 +4,11 @@
 
 ### [Examples, lessons, and more on Exploiting APIs](https://university.apisec.ai/products/apisec-certified-expert/categories/2150251350)
 
+### This is the site being used in the following examples & attacks: 
+**http://crapi.apisec.ai/login**
+
+<br>
+
 ## Broken Function Level Authorization  
 
 Where BOLA is all about accessing resources that do not belong to you, BFLA is all about performing unauthorized actions. BFLA vulnerabilities are common for requests that perform actions of other users. These requests could be lateral actions or escalated actions. Lateral actions are requests that perform actions of users that are the same role or privilege level. Escalated actions are requests that perform actions that are of an escalated role like an administrator. The main difference between hunting for BFLA is that you are looking for functional requests. This means that you will be testing for various HTTP methods, seeking out actions of other users that you should not be able to perform.
