@@ -37,7 +37,7 @@ To solve the lab, execute the whoami command and retrieve the output.
 <br>
 
 ## Solution:
-### The vulnerable parameter is the name field in the feedback form
+### The vulnerable parameter is the email field field in the feedback form
 at this endpoint: `POST /feedback/submit`
 
 ```HTTP
