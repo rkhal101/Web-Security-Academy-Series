@@ -102,38 +102,3 @@ SAML is an important area of focus in penetration testing, especially for applic
 ### **Conclusion**
 
 SAML plays a critical role in authentication and authorization for web applications. Its vulnerabilities can have severe consequences if exploited. Understanding how SAML works and its potential weaknesses is essential for penetration testing and securing web applications that rely on federated identity management.
-
-CORS Vulnerabilities
-
-CORS (Cross-Origin Resource Sharing) is a security feature that enables web pages to make requests to a different origin (domain, protocol, or port) than the one the web page was loaded from. However, misconfigurations in CORS can lead to vulnerabilities, allowing attackers to steal sensitive data, perform XSS attacks, or execute remote code. Here are some common CORS web app vulnerabilities:
-
-1. **Reflected Origins**: When an application sets `Access-Control-Allow-Origin` to an attacker-supplied domain and allows credentials (`Access-Control-Allow-Credentials: true`), an attacker can inject a malicious script and steal sensitive data.
-
-Exploitation: Host a JS script on an external server, create an HTML page with the script, and send it to the user. The script will make a CORS request to the vulnerable application, allowing the attacker to retrieve sensitive data.
-
-2. **Null Origins**: When an application sets `Access-Control-Allow-Origin` to `null` and allows credentials (`Access-Control-Allow-Credentials: true`), an attacker can set the `Origin` header to `null` and retrieve sensitive data.
-
-Exploitation: Host a JS script on an external server, add an iframe sandbox to set the frame's origin to `null`, and make a CORS request to the vulnerable application.
-
-3. **Trusted Subdomains**: When an application sets `Access-Control-Allow-Origin` to any of its subdomains and allows credentials (`Access-Control-Allow-Credentials: true`), an attacker can exploit an XSS vulnerability in the subdomain to steal sensitive data or perform unauthorized actions.
-
-Exploitation: Check if the subdomain has an XSS vulnerability and inject a malicious script. The script will make a CORS request to the vulnerable application, allowing the attacker to steal sensitive data.
-
-4. **Wildcard Origins**: Although not exploitable in itself, a wildcard (`*`) in `Access-Control-Allow-Origin` can be a sign of poor CORS implementation. If the application also sets `Access-Control-Allow-Credentials: true`, it may be vulnerable to other attacks.
-
-**Mitigations**
-
-1. Implement proper CORS headers: Set `Access-Control-Allow-Origin` to only trusted domains and restrict access to sensitive data.
-2. Restrict access to sensitive data: Use authentication and authorization mechanisms to control access to sensitive data.
-3. Use secure protocols: Ensure that all requests and responses use HTTPS (TLS) to prevent man-in-the-middle attacks.
-4. Validate user input: Sanitize and validate user input to prevent XSS attacks.
-
-**Detection and Testing**
-
-1. Use Burp Suite or Chrome DevTools to search for CORS headers in responses.
-2. Test for CORS misconfigurations by setting the `Origin` header to different values (e.g., attacker-supplied domain, null, or subdomain).
-3. Verify that the application responds correctly to each test case.
-
-**Conclusion**
-
-CORS web app vulnerabilities can have severe consequences, including data theft and unauthorized access. By understanding these vulnerabilities and implementing proper CORS configurations, you can protect your web application from these threats. Remember to validate user input, use secure protocols, and restrict access to sensitive data to ensure the security of your application.
