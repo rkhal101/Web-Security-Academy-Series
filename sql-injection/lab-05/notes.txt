@@ -1,3 +1,7 @@
+SQL injection UNION attack, retrieving data from other tables
+---------------------------------------------------------------------
+https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-data-from-other-tables
+
 SQL Injection - Product category filter.
 
 End Goal - Output the usernames and passwords in the users table and login as the administrator user.
