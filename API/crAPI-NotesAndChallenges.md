@@ -2,10 +2,19 @@
 
 <br>
 
-### [Examples, lessons, and more on Exploiting APIs](https://university.apisec.ai/products/apisec-certified-expert/categories/2150251350)
+## [Examples, lessons, and more on Exploiting APIs](https://university.apisec.ai/products/apisec-certified-expert/categories/2150251350)
 
-### This is the site being used in the following examples & attacks: 
-**http://crapi.apisec.ai/login**
+<br>
+
+## The API 
+## http://crapi.apisec.ai/login
+
+<br>
+
+## The Email Client
+## http://crapi.apisec.ai:8025/
+
+<br>
 
 <br>
 
