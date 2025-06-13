@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import sys
 import urllib3
@@ -17,8 +19,6 @@ def get_csrf_token(s, url):
 
 
 def exploit_xxe(s, url):
-
-    # Get CSRF token
     post_url = url + "/post?postId=1"
     csrf_token = get_csrf_token(s, post_url)
 

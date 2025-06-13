@@ -1,3 +1,5 @@
+https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data
+
 SQL injection - product category filter
 
 SELECT * FROM products WHERE category = 'Gifts' AND released = 1 

