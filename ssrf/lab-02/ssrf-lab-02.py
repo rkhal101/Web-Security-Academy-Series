@@ -40,13 +40,13 @@ def main():
     if len(sys.argv) !=2:
         print("(+) Usage: %s <url>" % sys.argv[0])
         print("(+) Example: %s www.example.com" % sys.argv[0])
-
-    url = sys.argv[1]
-    print("(+) Finding admin hostname...")
-    admin_ip_address = check_admin_hostname(url)
-    print ("(+) Found the admin ip address: %s" % admin_ip_address)
-    print("(+) Deleting Carlos user...")
-    delete_user(url, admin_ip_address)
+    else:
+        url = sys.argv[1]
+        print("(+) Finding admin hostname...")
+        admin_ip_address = check_admin_hostname(url)
+        print ("(+) Found the admin ip address: %s" % admin_ip_address)
+        print("(+) Deleting Carlos user...")
+        delete_user(url, admin_ip_address)
 
 if __name__ == "__main__":
     main()
